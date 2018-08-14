@@ -10,9 +10,9 @@ import UIKit
 import BYToolModule
 
 class EESoreImageView: UIView{
-    var storeScrollView: UIScrollView!
-    var storeImage: UIImageView! //保存截取的图片
-    
+    fileprivate var storeScrollView: UIScrollView!
+    public var storeImageView: UIImageView! //保存截取的图片
+    public var saveImageBlock:((_ image:UIImage) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,19 +30,19 @@ class EESoreImageView: UIView{
         storeScrollView.backgroundColor = UIColor.init(white: 0, alpha: 0.5)
         self.addSubview(storeScrollView)
         
-        storeImage = UIImageView()
-        self.storeScrollView.addSubview(storeImage)
+        storeImageView = UIImageView()
+        self.storeScrollView.addSubview(storeImageView)
     }
     
     public func updateViewWithImage(_ image:UIImage) {
-        storeImage.image = image
-        storeImage.frame = CGRect(x: 15, y: 0, width: FScreen_W - 30, height: image.size.height)
+        storeImageView.image = image
+        storeImageView.frame = CGRect(x: 15, y: 40, width: FScreen_W - 30, height: image.size.height)
         var contentHeiht = image.size.height
         if contentHeiht < FScreen_H {
             contentHeiht = FScreen_H + 10
         }
-        storeImage.viewAddLayerCorner(cornerRadius: 20, UIColor.ff_HexColor(0xFF8200))
-        storeScrollView.contentSize = CGSize(width: FScreen_W , height: image.size.height + 10)
+        storeImageView.viewAddLayerCorner(cornerRadius: 20, UIColor.ff_HexColor(0xFF8200))
+        storeScrollView.contentSize = CGSize(width: FScreen_W , height: image.size.height + 30)
     }
     
     @objc func clearShotScreen() {
@@ -50,7 +50,10 @@ class EESoreImageView: UIView{
     }
     
     @objc func saveButton() {
-        
+        self.removeFromSuperview()
+        if saveImageBlock != nil && storeImageView.image != nil{
+            saveImageBlock!(storeImageView.image!)
+        }
     }
     
     fileprivate func configBottons() {
@@ -66,12 +69,11 @@ class EESoreImageView: UIView{
         let rightButton = UIButton(type: .custom)
         rightButton.backgroundColor = UIColor.ff_HexColor(0xFF8200)
         rightButton.frame = CGRect(x: FScreen_W / 2, y:FScreen_H - 50, width: FScreen_W / 2, height: 50)
-        rightButton.setTitle("保存", for: .normal)
+        rightButton.setTitle("完成", for: .normal)
         rightButton.setTitleColor(UIColor.white, for: .normal)
         rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-
+        
         rightButton.addTarget(self, action: #selector(saveButton), for: .touchUpInside)
         self.addSubview(rightButton)
     }
-    
 }

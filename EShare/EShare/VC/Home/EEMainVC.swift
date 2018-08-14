@@ -32,7 +32,7 @@ class EEMainVC: XLBaseVC {
     @IBAction func searchButtonClicked(_ sender: Any) {
         let wKWebViewShot = DDGWKWebViewShot()
 //        wKWebViewShot.urlString = textFiled.text
-        wKWebViewShot.urlString = "http://www.baidu.com"
+        wKWebViewShot.urlString = "https://www.baidu.com"
         self.navigationController?.pushViewController(wKWebViewShot, animated: true)
     }
     

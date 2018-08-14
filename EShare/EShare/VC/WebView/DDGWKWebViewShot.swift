@@ -26,7 +26,7 @@ class DDGWKWebViewShot: XLBaseVC ,WKUIDelegate,WKNavigationDelegate {
     //打开链接
     fileprivate func openStringURL() {
         guard let path = URL(string:urlString ?? "") else {
-            //            SMWrongAlert.show("打开的网址错误")
+                        SMWrongAlert.show("打开的网址错误")
             return
         }
         wkWebView?.load(URLRequest(url: path))
@@ -45,8 +45,6 @@ extension DDGWKWebViewShot {
         let configuration = WKWebViewConfiguration()
         configuration.preferences = WKPreferences()
         configuration.preferences.minimumFontSize = 10
-        configuration.preferences.javaScriptEnabled = true
-        configuration.preferences.javaScriptCanOpenWindowsAutomatically = false
         wkWebView = WKWebView(frame:CGRect(x: 0, y: FNavgationBar_H, width: FScreen_W , height: FScreen_H - FNavgationBar_H), configuration: configuration)
         self.view.addSubview(wkWebView!)
         wkWebView?.uiDelegate = self
@@ -59,18 +57,22 @@ extension DDGWKWebViewShot {
     fileprivate func configBottomViews() {
         let bottowView = UIView(frame: CGRect(x: 0, y: FScreen_H - 50, width: FScreen_W, height: 50))
         self.view.addSubview(bottowView)
-        let leftBtn = UIButton()
-        leftBtn.backgroundColor = UIColor.yellow
-        leftBtn.setTitle("截wkwebImage", for: .normal)
-        leftBtn.setTitleColor(UIColor.blue, for: .normal)
-        leftBtn.addTarget(self, action: #selector(DDGWKWebViewShot.screenShotWebView), for: .touchUpInside)
-        leftBtn.frame = CGRect(x: 0, y:0, width: FScreen_W, height: 50)
-        bottowView.addSubview(leftBtn)
+        let cutButton = UIButton(type: .custom)
+        cutButton.setTitle("截图", for: .normal)
+        cutButton.setTitleColor(UIColor.white, for: .normal)
+        cutButton.setBackgroundImage(#imageLiteral(resourceName: "btn_nor"), for: .normal)
+        cutButton.setBackgroundImage(#imageLiteral(resourceName: "btn_pre"), for: .highlighted)
+        cutButton.addTarget(self, action: #selector(DDGWKWebViewShot.screenShotWebView), for: .touchUpInside)
+        cutButton.frame = CGRect(x: 0, y:0, width: FScreen_W, height: 50)
+        cutButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        bottowView.addSubview(cutButton)
     }
     
     @objc func screenShotWebView() {
         weak var weakSelf = self
+        SMWrongAlert.showActivityIndicator(text: "", detailText: "图片生成中...", toView: UIApplication.shared.keyWindow!, animated: true)
         wkWebView?.DDGContentScreenShot { (image) in
+            SMWrongAlert.hide()
             if image != nil {
                 weakSelf?.showStoreView(image!)
             }
@@ -78,9 +80,16 @@ extension DDGWKWebViewShot {
     }
     
     fileprivate func showStoreView(_ image:UIImage) {
+        weak var weakSelf = self
+
         storeImageView.frame = CGRect(x: 0, y: 0, width: FScreen_W, height: FScreen_H)
         self.view.addSubview(storeImageView)
         storeImageView.updateViewWithImage(image)
+        storeImageView.saveImageBlock = { (image) in
+            let vc = EETintageVC()
+            vc.originalImage = image
+            weakSelf?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
