@@ -1,0 +1,50 @@
+PODS:
+  - BYToolModule (1.2.2):
+    - BYToolModule/extension (= 1.2.2)
+  - BYToolModule/extension (1.2.2)
+  - FFToolModule (1.1.8):
+    - FFToolModule/FF_Alert (= 1.1.8)
+    - FFToolModule/FF_CountDownButton (= 1.1.8)
+    - FFToolModule/FF_OC_Category (= 1.1.8)
+    - FFToolModule/FF_TextView_PlaceHolder (= 1.1.8)
+    - FFToolModule/FF_Wrong_Alert (= 1.1.8)
+  - FFToolModule/FF_Alert (1.1.8)
+  - FFToolModule/FF_CountDownButton (1.1.8)
+  - FFToolModule/FF_OC_Category (1.1.8)
+  - FFToolModule/FF_TextView_PlaceHolder (1.1.8)
+  - FFToolModule/FF_Wrong_Alert (1.1.8)
+  - LEEAlert (1.1.8)
+  - MJRefresh (3.1.15.3)
+  - SDAutoLayout (2.2.0)
+  - SDWebImage (4.4.1):
+    - SDWebImage/Core (= 4.4.1)
+  - SDWebImage/Core (4.4.1)
+  - SVProgressHUD (2.2.5)
+  - SwiftyUserDefaults (3.0.1)
+  - TZImagePickerController (2.1.8)
+
+DEPENDENCIES:
+  - BYToolModule
+  - FFToolModule
+  - LEEAlert
+  - MJRefresh
+  - SDAutoLayout
+  - SDWebImage
+  - SVProgressHUD
+  - SwiftyUserDefaults
+  - TZImagePickerController
+
+SPEC CHECKSUMS:
+  BYToolModule: 9bd4603c1d92c7e4a8b1adb6723be3cf5d30c87d
+  FFToolModule: 2e37e6c9a5d24ba87c966aff747ae30786924927
+  LEEAlert: e264af2c9bffd1dbf95d56c9f3df53fba52443c2
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
+  SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
+  TZImagePickerController: c2c75f3d5c6b9c634185ecb458df66d0aab8bbae
+
+PODFILE CHECKSUM: 284e34bc0172ab8b669c861a74fbbe4e244b2375
+
+COCOAPODS: 1.4.0

@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		762179CB2122B75000321929 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762179CA2122B75000321929 /* AppDelegate.swift */; };
-		762179CD2122B75000321929 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762179CC2122B75000321929 /* ViewController.swift */; };
-		762179D02122B75000321929 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762179CE2122B75000321929 /* Main.storyboard */; };
 		762179D22122B75100321929 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762179D12122B75100321929 /* Assets.xcassets */; };
 		762179D52122B75100321929 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762179D32122B75100321929 /* LaunchScreen.storyboard */; };
+		762E25FD2122B8CF0077F8DD /* GlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E25FC2122B8CF0077F8DD /* GlobalConfig.swift */; };
+		762E26022122B9AB0077F8DD /* XLNavgationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E25FF2122B9AB0077F8DD /* XLNavgationVC.swift */; };
+		762E26032122B9AB0077F8DD /* XLBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26002122B9AB0077F8DD /* XLBaseVC.swift */; };
+		762E26042122B9AB0077F8DD /* XLNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26012122B9AB0077F8DD /* XLNavBar.swift */; };
+		762E26062122BA0A0077F8DD /* EEMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26052122BA0A0077F8DD /* EEMainVC.swift */; };
+		762E26112122BECC0077F8DD /* UIView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E260D2122BECB0077F8DD /* UIView+DDGShot.swift */; };
+		762E26122122BECC0077F8DD /* UIImage+DDGManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E260E2122BECC0077F8DD /* UIImage+DDGManage.swift */; };
+		762E26132122BECC0077F8DD /* UIScrollView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E260F2122BECC0077F8DD /* UIScrollView+DDGShot.swift */; };
+		762E26142122BECC0077F8DD /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26102122BECC0077F8DD /* WKWebView+DDGShot.swift */; };
+		762E26162122BF210077F8DD /* DDGWKWebViewShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26152122BF210077F8DD /* DDGWKWebViewShot.swift */; };
+		762E26182122D5DA0077F8DD /* EEMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762E26172122D5DA0077F8DD /* EEMainVC.xib */; };
+		762E261C2122D9F40077F8DD /* EESoreImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E261B2122D9F40077F8DD /* EESoreImageView.swift */; };
+		82FFC7AB802271BC9F57294A /* Pods_EShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E556B4E67C42376711B4B73 /* Pods_EShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E556B4E67C42376711B4B73 /* Pods_EShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		762179C72122B75000321929 /* EShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		762179CA2122B75000321929 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		762179CC2122B75000321929 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		762179CF2122B75000321929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		762179D12122B75100321929 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		762179D42122B75100321929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		762179D62122B75100321929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		762E25FC2122B8CF0077F8DD /* GlobalConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfig.swift; sourceTree = "<group>"; };
+		762E25FF2122B9AB0077F8DD /* XLNavgationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLNavgationVC.swift; sourceTree = "<group>"; };
+		762E26002122B9AB0077F8DD /* XLBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLBaseVC.swift; sourceTree = "<group>"; };
+		762E26012122B9AB0077F8DD /* XLNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLNavBar.swift; sourceTree = "<group>"; };
+		762E26052122BA0A0077F8DD /* EEMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEMainVC.swift; sourceTree = "<group>"; };
+		762E260D2122BECB0077F8DD /* UIView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DDGShot.swift"; sourceTree = "<group>"; };
+		762E260E2122BECC0077F8DD /* UIImage+DDGManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DDGManage.swift"; sourceTree = "<group>"; };
+		762E260F2122BECC0077F8DD /* UIScrollView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DDGShot.swift"; sourceTree = "<group>"; };
+		762E26102122BECC0077F8DD /* WKWebView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+DDGShot.swift"; sourceTree = "<group>"; };
+		762E26152122BF210077F8DD /* DDGWKWebViewShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDGWKWebViewShot.swift; sourceTree = "<group>"; };
+		762E26172122D5DA0077F8DD /* EEMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EEMainVC.xib; sourceTree = "<group>"; };
+		762E261B2122D9F40077F8DD /* EESoreImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EESoreImageView.swift; sourceTree = "<group>"; };
+		BCF228D100E67EC1E7B4C5A6 /* Pods-EShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-EShare/Pods-EShare.release.xcconfig"; sourceTree = "<group>"; };
+		BF225807CCA384C75C3DE2C7 /* Pods-EShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EShare/Pods-EShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FFC7AB802271BC9F57294A /* Pods_EShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0112B81A00F01F713C09D535 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF225807CCA384C75C3DE2C7 /* Pods-EShare.debug.xcconfig */,
+				BCF228D100E67EC1E7B4C5A6 /* Pods-EShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		54087FC0E2AACF1410CF7644 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E556B4E67C42376711B4B73 /* Pods_EShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		762179BE2122B75000321929 = {
 			isa = PBXGroup;
 			children = (
 				762179C92122B75000321929 /* EShare */,
 				762179C82122B75000321929 /* Products */,
+				0112B81A00F01F713C09D535 /* Pods */,
+				54087FC0E2AACF1410CF7644 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,96 @@
 		762179C92122B75000321929 /* EShare */ = {
 			isa = PBXGroup;
 			children = (
-				762179CA2122B75000321929 /* AppDelegate.swift */,
-				762179CC2122B75000321929 /* ViewController.swift */,
-				762179CE2122B75000321929 /* Main.storyboard */,
+				762E260A2122BE810077F8DD /* AppDelegate */,
+				762E26092122BE7F0077F8DD /* Config */,
+				762E26082122BE7C0077F8DD /* VC */,
+				762E261F2122DA0E0077F8DD /* WebView */,
+				762E26072122BE730077F8DD /* Tools */,
 				762179D12122B75100321929 /* Assets.xcassets */,
 				762179D32122B75100321929 /* LaunchScreen.storyboard */,
 				762179D62122B75100321929 /* Info.plist */,
 			);
 			path = EShare;
+			sourceTree = "<group>";
+		};
+		762E25FE2122B9990077F8DD /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				762E26002122B9AB0077F8DD /* XLBaseVC.swift */,
+				762E26012122B9AB0077F8DD /* XLNavBar.swift */,
+				762E25FF2122B9AB0077F8DD /* XLNavgationVC.swift */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		762E26072122BE730077F8DD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				762E260C2122BEC30077F8DD /* DDGScreenShot */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		762E26082122BE7C0077F8DD /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				762E25FE2122B9990077F8DD /* BaseClass */,
+				762E260B2122BEAD0077F8DD /* Home */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		762E26092122BE7F0077F8DD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				762E25FC2122B8CF0077F8DD /* GlobalConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		762E260A2122BE810077F8DD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				762179CA2122B75000321929 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		762E260B2122BEAD0077F8DD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				762E26052122BA0A0077F8DD /* EEMainVC.swift */,
+				762E26172122D5DA0077F8DD /* EEMainVC.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		762E260C2122BEC30077F8DD /* DDGScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				762E260E2122BECC0077F8DD /* UIImage+DDGManage.swift */,
+				762E260F2122BECC0077F8DD /* UIScrollView+DDGShot.swift */,
+				762E260D2122BECB0077F8DD /* UIView+DDGShot.swift */,
+				762E26102122BECC0077F8DD /* WKWebView+DDGShot.swift */,
+			);
+			path = DDGScreenShot;
+			sourceTree = "<group>";
+		};
+		762E261F2122DA0E0077F8DD /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				762E26202122DA350077F8DD /* View */,
+				762E26152122BF210077F8DD /* DDGWKWebViewShot.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		762E26202122DA350077F8DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				762E261B2122D9F40077F8DD /* EESoreImageView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 762179D92122B75100321929 /* Build configuration list for PBXNativeTarget "EShare" */;
 			buildPhases = (
+				F02DE2F8D1EE4274F3E9C597 /* [CP] Check Pods Manifest.lock */,
 				762179C32122B75000321929 /* Sources */,
 				762179C42122B75000321929 /* Frameworks */,
 				762179C52122B75000321929 /* Resources */,
+				2EE0B0B9371FD574504D5715 /* [CP] Embed Pods Frameworks */,
+				331E0EF816266317DE93A008 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,33 +253,105 @@
 			files = (
 				762179D52122B75100321929 /* LaunchScreen.storyboard in Resources */,
 				762179D22122B75100321929 /* Assets.xcassets in Resources */,
-				762179D02122B75000321929 /* Main.storyboard in Resources */,
+				762E26182122D5DA0077F8DD /* EEMainVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EE0B0B9371FD574504D5715 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EShare/Pods-EShare-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BYToolModule/BYToolModule.framework",
+				"${BUILT_PRODUCTS_DIR}/FFToolModule/FFToolModule.framework",
+				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BYToolModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFToolModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EShare/Pods-EShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		331E0EF816266317DE93A008 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EShare/Pods-EShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F02DE2F8D1EE4274F3E9C597 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EShare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		762179C32122B75000321929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				762179CD2122B75000321929 /* ViewController.swift in Sources */,
+				762E26112122BECC0077F8DD /* UIView+DDGShot.swift in Sources */,
+				762E261C2122D9F40077F8DD /* EESoreImageView.swift in Sources */,
+				762E26162122BF210077F8DD /* DDGWKWebViewShot.swift in Sources */,
+				762E26032122B9AB0077F8DD /* XLBaseVC.swift in Sources */,
 				762179CB2122B75000321929 /* AppDelegate.swift in Sources */,
+				762E26142122BECC0077F8DD /* WKWebView+DDGShot.swift in Sources */,
+				762E26062122BA0A0077F8DD /* EEMainVC.swift in Sources */,
+				762E26132122BECC0077F8DD /* UIScrollView+DDGShot.swift in Sources */,
+				762E26022122B9AB0077F8DD /* XLNavgationVC.swift in Sources */,
+				762E25FD2122B8CF0077F8DD /* GlobalConfig.swift in Sources */,
+				762E26122122BECC0077F8DD /* UIImage+DDGManage.swift in Sources */,
+				762E26042122B9AB0077F8DD /* XLNavBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		762179CE2122B75000321929 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				762179CF2122B75000321929 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		762179D32122B75100321929 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,11 +479,14 @@
 		};
 		762179DA2122B75100321929 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF225807CCA384C75C3DE2C7 /* Pods-EShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9854286B7Z;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,17 +494,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		762179DB2122B75100321929 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF228D100E67EC1E7B4C5A6 /* Pods-EShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9854286B7Z;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
