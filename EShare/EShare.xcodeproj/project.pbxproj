@@ -22,6 +22,7 @@
 		762E26162122BF210077F8DD /* DDGWKWebViewShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26152122BF210077F8DD /* DDGWKWebViewShot.swift */; };
 		762E26182122D5DA0077F8DD /* EEMainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762E26172122D5DA0077F8DD /* EEMainVC.xib */; };
 		762E261C2122D9F40077F8DD /* EESoreImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E261B2122D9F40077F8DD /* EESoreImageView.swift */; };
+		762E26222122F9B10077F8DD /* SMWrongAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26212122F9B10077F8DD /* SMWrongAlert.swift */; };
 		82FFC7AB802271BC9F57294A /* Pods_EShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E556B4E67C42376711B4B73 /* Pods_EShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		762E26152122BF210077F8DD /* DDGWKWebViewShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDGWKWebViewShot.swift; sourceTree = "<group>"; };
 		762E26172122D5DA0077F8DD /* EEMainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EEMainVC.xib; sourceTree = "<group>"; };
 		762E261B2122D9F40077F8DD /* EESoreImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EESoreImageView.swift; sourceTree = "<group>"; };
+		762E26212122F9B10077F8DD /* SMWrongAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMWrongAlert.swift; sourceTree = "<group>"; };
 		BCF228D100E67EC1E7B4C5A6 /* Pods-EShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-EShare/Pods-EShare.release.xcconfig"; sourceTree = "<group>"; };
 		BF225807CCA384C75C3DE2C7 /* Pods-EShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EShare/Pods-EShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 		762E26072122BE730077F8DD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				762E26212122F9B10077F8DD /* SMWrongAlert.swift */,
 				762E260C2122BEC30077F8DD /* DDGScreenShot */,
 			);
 			path = Tools;
@@ -270,6 +273,7 @@
 				"${BUILT_PRODUCTS_DIR}/BYToolModule/BYToolModule.framework",
 				"${BUILT_PRODUCTS_DIR}/FFToolModule/FFToolModule.framework",
 				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -282,6 +286,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BYToolModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFToolModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -345,6 +350,7 @@
 				762E26022122B9AB0077F8DD /* XLNavgationVC.swift in Sources */,
 				762E25FD2122B8CF0077F8DD /* GlobalConfig.swift in Sources */,
 				762E26122122BECC0077F8DD /* UIImage+DDGManage.swift in Sources */,
+				762E26222122F9B10077F8DD /* SMWrongAlert.swift in Sources */,
 				762E26042122B9AB0077F8DD /* XLNavBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,10 +493,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -508,10 +511,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

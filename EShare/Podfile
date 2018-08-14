@@ -13,5 +13,5 @@ pod 'TZImagePickerController'
 pod 'FFToolModule’
 pod 'BYToolModule’
 pod 'LEEAlert'
-
+pod 'MBProgressHUD'
 end
