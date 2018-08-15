@@ -3,7 +3,7 @@
 //  lottery
 //
 //  Created by 郑强飞 on 2018/3/10.
-//  Copyright © 2018年 CP. All rights reserved.
+//  Copyright © 2018年 郑强飞 All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,6 @@ private var EEGViewScreenShotKey_IsShoting: String = "EEGViewScreenShot_AssoKey_
 public extension UIView {
     
     public func EEGSetFrame(_ frame: CGRect) {
-        // Do nothing, use for swizzling
     }
     
     var isShoting:Bool! {
@@ -35,9 +34,7 @@ public extension UIView {
             objc_setAssociatedObject(self, &EEGViewScreenShotKey_IsShoting, num, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
-    // Ref: chromium source - snapshot_manager, fix wkwebview screenshot bug.
-    
+        
     public func EEGContainsWKWebView() -> Bool {
         if self.isKind(of: WKWebView.self) {
             return true
