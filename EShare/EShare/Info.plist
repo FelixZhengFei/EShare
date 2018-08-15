@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>U享</string>
+	<string>U-Screen</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -37,12 +37,6 @@
 	<array>
 		<string>weixin</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>为了能够拍摄您的生活照片</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>为了能够保存截取好的长图片</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>为了能够保存截取好的长图片</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -50,6 +44,12 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>为了能够拍摄您的生活照片</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>为了能够保存截取好的长图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>为了能够保存截取好的长图片</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

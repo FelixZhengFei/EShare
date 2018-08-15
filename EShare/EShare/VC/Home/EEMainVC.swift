@@ -9,14 +9,15 @@
 import UIKit
 import FFToolModule
 
-class EEMainVC: EEBaseVC {
+class EEMainVC: EEBaseVC,UITextFieldDelegate {
 
     @IBOutlet weak var serchButton: UIButton!
     @IBOutlet weak var textFiled: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "EShare"
+        title = "U-Screen"
         setupForDismissKeyboard()
+        self.hideBackButton()
         configUI()
     }
 
@@ -29,13 +30,45 @@ class EEMainVC: EEBaseVC {
         serchButton.viewAddLayerCorner(cornerRadius: 10, UIColor.clear)
     }
     
-    @IBAction func searchButtonClicked(_ sender: Any) {
+    @IBAction func searchButtonClicked() {
+    
+        var urlString = textFiled.text!
+        if urlString.count <= 0 {
+            EEWrongAlert.show("请输入您要截图的网页地址")
+            return
+        }
+        if urlString.hasPrefix("http://") ||  urlString.hasPrefix("https://") {
+            
+        } else {
+            urlString = "http://" + urlString
+        }
+        
+        if !isVarulURl(urlString){
+            EEWrongAlert.show("请输入正确网页地址")
+            return
+        }
         let wKWebViewShot = EEWebView()
-//        wKWebViewShot.urlString = textFiled.text
-        wKWebViewShot.urlString = "https://www.baidu.com"
+        wKWebViewShot.urlString = urlString
         self.navigationController?.pushViewController(wKWebViewShot, animated: true)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchButtonClicked()
+        return true
+    }
 
+    //判断网页是否正确
+    fileprivate func isVarulURl(_ sring:String)->Bool {
+        let regex = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
+        let isValid = predicate.evaluate(with: sring)
+        return isValid
+    }
+    
+    @IBAction func aboutUserButtonClcked(_ sender: Any) {
+        let vc = EEAboutUsVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 

@@ -36,13 +36,13 @@ class EESoreImageView: UIView{
     
     public func updateViewWithImage(_ image:UIImage) {
         storeImageView.image = image
-        storeImageView.frame = CGRect(x: 15, y: 40, width: FScreen_W - 30, height: image.size.height)
+        storeImageView.frame = CGRect(x: 15, y: 30, width: FScreen_W - 30, height: image.size.height)
         var contentHeiht = image.size.height
         if contentHeiht < FScreen_H {
             contentHeiht = FScreen_H + 10
         }
         storeImageView.viewAddLayerCorner(cornerRadius: 20, UIColor.ff_HexColor(0xFF8200))
-        storeScrollView.contentSize = CGSize(width: FScreen_W , height: image.size.height + 30)
+        storeScrollView.contentSize = CGSize(width: FScreen_W , height: image.size.height + 40)
     }
     
     @objc func clearShotScreen() {

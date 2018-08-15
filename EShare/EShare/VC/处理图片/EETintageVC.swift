@@ -31,13 +31,9 @@ class EETintageVC: EEBaseVC {
 extension EETintageVC {
     
     /**配置UI*/
-    fileprivate  func configShowImageView() {
-        originalImage = originalImage.waterMarkedImage(waterMarkImage: #imageLiteral(resourceName: "shuiyin"), corner: .BottomRight, margin: CGPoint(x: 25, y: 25), alpha: 1)
-        originalImage = originalImage.waterMarkedImage(waterMarkText: "来自 U-Share", corner: .BottomRight, margin: CGPoint(x: 10, y: 10), waterMarkTextColor: UIColor.ff_HexColor(0xFF8240), waterMarkTextFont: UIFont.systemFont(ofSize: 12, weight: .regular), backgroundColor: UIColor.clear)
-        
-        
+    fileprivate func configShowImageView() {
         let imageHeight = (FScreen_H - FNavgationBar_H - 10 - 120)
-        borowView = EEImageBroweView(frame: CGRect(x:5, y: FNavgationBar_H + 5, width: FScreen_W - 10, height: imageHeight))
+        borowView = EEImageBroweView(frame: CGRect(x:10, y: FNavgationBar_H + 10, width: FScreen_W - 20, height: imageHeight))
         borowView.viewAddLayerCorner(cornerRadius: 5, UIColor.ff_HexColor(0xFd6547))
         borowView.originImage = originalImage
         borowView.configImage()
@@ -48,12 +44,10 @@ extension EETintageVC {
     fileprivate func configRightButton() {
         let rightButton = UIButton(type: .custom)
         rightButton.frame = CGRect(x: FScreen_W - 44, y:FStatusBar_H, width: 44, height: 44)
-        rightButton.setBackgroundImage(#imageLiteral(resourceName: "nav_nemu"), for: .normal)
-        rightButton.setBackgroundImage(#imageLiteral(resourceName: "nav_nemu"), for:.highlighted)
+        rightButton.setImage(#imageLiteral(resourceName: "nav_list"), for: .normal)
         rightButton.addTarget(self, action: #selector(configShareAlertView), for: .touchUpInside)
         self.navigationHeaderView.addSubview(rightButton)
     }
-    
     
     /**底部按键*/
     fileprivate func configBottomButtons() {
@@ -63,7 +57,7 @@ extension EETintageVC {
         lable.text = "渲染图片"
         lable.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         lable.textAlignment = .center
-        lable.backgroundColor = UIColor.ff_HexColor(0xF4F5F6)
+        lable.backgroundColor = UIColor.white
         lable.textColor = UIColor.ff_HexColor(0xFF8200)
         self.view.addSubview(lable)
         button_Y += 40
@@ -81,7 +75,7 @@ extension EETintageVC {
             bottonScollView.addSubview(changeBtn)
             btn_X = 15 + (btnWidth + 5) * CGFloat(i+1)
         }
-        bottonScollView.backgroundColor = UIColor.ff_HexColor(0xF4F5F6)
+        bottonScollView.backgroundColor = UIColor.white
         bottonScollView.contentSize = CGSize(width: btn_X + 10, height: 60)
     }
     
@@ -103,7 +97,15 @@ extension EETintageVC {
     
     /**保存到相册*/
     fileprivate func saveImageButtonClicked() {
-        UIImageWriteToSavedPhotosAlbum(borowView.imageView.image!, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+        let saveImage = filerImageWithShuiYin()
+        UIImageWriteToSavedPhotosAlbum(saveImage, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    /**滤镜*/
+    fileprivate func filerImageWithShuiYin()->UIImage {
+        var tempImage = originalImage.waterMarkedImage(waterMarkImage: #imageLiteral(resourceName: "shuiyin"), corner: .BottomRight, margin: CGPoint(x: 25, y: 25), alpha: 1)
+        tempImage = tempImage.waterMarkedImage(waterMarkText: "来自E-Filter", corner: .BottomRight, margin: CGPoint(x: 10, y: 10), waterMarkTextColor: UIColor.ff_HexColor(0xFF8240), waterMarkTextFont: UIFont.systemFont(ofSize: 12, weight: .regular), backgroundColor: UIColor.clear)
+        return tempImage
     }
     
     @objc func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
@@ -118,11 +120,11 @@ extension EETintageVC {
     /*分享到微信*/
     fileprivate func showToWeiXinFrinds(_ scene:WXScene) {
         let message = WXMediaMessage()
-        message.setThumbImage(#imageLiteral(resourceName: "btn_nor"))
+//        message.setThumbImage(#imageLiteral(resourceName: "btn_nor"))
         let imageObject = WXImageObject()
-        imageObject.imageData = UIImagePNGRepresentation(self.borowView.imageView.image!)
+        let saveImage = filerImageWithShuiYin()
+        imageObject.imageData = UIImagePNGRepresentation(saveImage)
         message.mediaObject = imageObject
-        
         let req = SendMessageToWXReq()
         req.text = ""
         req.bText = false
