@@ -52,6 +52,7 @@
 		762E26242122FCEC0077F8DD /* EETintageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EETintageVC.swift; sourceTree = "<group>"; };
 		762E26262123069A0077F8DD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		762E262A2123087A0077F8DD /* EEImageBroweView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEImageBroweView.swift; sourceTree = "<group>"; };
+		76F0D0AB2123B71D00455BC3 /* EEBridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEBridgeHeader.h; sourceTree = "<group>"; };
 		BCF228D100E67EC1E7B4C5A6 /* Pods-EShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-EShare/Pods-EShare.release.xcconfig"; sourceTree = "<group>"; };
 		BF225807CCA384C75C3DE2C7 /* Pods-EShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EShare/Pods-EShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				762E25FC2122B8CF0077F8DD /* GlobalConfig.swift */,
+				76F0D0AB2123B71D00455BC3 /* EEBridgeHeader.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -509,7 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9854286B7Z;
+				DEVELOPMENT_TEAM = YX42LJ752B;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -521,8 +523,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wontai.guanxinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = EShare/Config/EEBridgeHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -534,7 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9854286B7Z;
+				DEVELOPMENT_TEAM = YX42LJ752B;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -546,8 +549,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wontai.guanxinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = EShare/Config/EEBridgeHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

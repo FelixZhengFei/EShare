@@ -19,7 +19,7 @@ let TEXT_COLOR = UIColor.ff_HexColor(0x333333)
 
 //MARK: ************************常用值配置************************
 /**微信Key*/
-let WeChat_KEY:String = "wxfff13888b8a702bc"
+let WeChat_KEY:String = "wxad505531f7cf972d"
 /**屏幕宽度 */
 /**屏幕Bounds */
 let SCREEN_B:CGRect    = UIScreen.main.bounds
@@ -68,4 +68,5 @@ public func FFPrint<N>(_ message:N,fileName:String = #file,methodName:String = #
     #else
     #endif
 }
+
 

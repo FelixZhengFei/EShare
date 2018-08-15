@@ -52,6 +52,7 @@ class EEImageBroweView: UIView {
         
         //当没有检测到双击 或者 检测双击失败，单击才有效
         tapOne.require(toFail: tapTwo)
+        
     }
     
     @objc func handleOneClick(recongnizer:UITapGestureRecognizer) {
@@ -64,6 +65,8 @@ class EEImageBroweView: UIView {
             return
         }
     }
+    
+
     
     /// 双击图片的处理
     @objc func handleDouble(recongnizer:UITapGestureRecognizer) {

@@ -47,7 +47,7 @@ class XLNavBar: UIView {
         titleLabel.textAlignment = .center
         titleLabel.textColor = UIColor.black
         titleLabel.backgroundColor = UIColor.clear
-        titleLabel.font = UIFont.systemFont(ofSize: 17)
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         self.addSubview(titleLabel)
         
         _ = titleLabel.sd_layout()

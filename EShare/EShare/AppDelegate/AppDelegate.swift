@@ -9,13 +9,14 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         initWindow()
+        configWeiChat()
         return true
     }
 
@@ -27,22 +28,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     }
     
-    func applicationWillResignActive(_ application: UIApplication) {
-
+    fileprivate func configWeiChat() {
+        WXApi.registerApp(WeChat_KEY)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return WXApi.handleOpen(url, delegate: self)
     }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
+    func onResp(_ resp: BaseResp!) {
+        if resp.isKind(of: SendMessageToWXResp.self) {//确保是对我们分享操作的回调
+            if resp.errCode == WXSuccess.rawValue{//分享成功
+                print("分享成功")
+            }else if resp.errCode == WXErrCodeCommon.rawValue {//普通错误类型
+                print("分享失败：普通错误类型")
+            }else if resp.errCode == WXErrCodeUserCancel.rawValue {//用户点击取消并返回
+                print("分享失败：用户点击取消并返回")
+            }else if resp.errCode == WXErrCodeSentFail.rawValue {//发送失败
+                print("分享失败：发送失败")
+            }else if resp.errCode == WXErrCodeAuthDeny.rawValue {//授权失败
+                print("分享失败：授权失败")
+            }else if resp.errCode == WXErrCodeUnsupport.rawValue {//微信不支持
+                print("分享失败：微信不支持")
+            }
+        }
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-    }
-
 
 }
 

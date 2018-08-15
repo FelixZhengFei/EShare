@@ -35,6 +35,7 @@ class EEMainVC: XLBaseVC {
         wKWebViewShot.urlString = "https://www.baidu.com"
         self.navigationController?.pushViewController(wKWebViewShot, animated: true)
     }
+
     
 }
 
