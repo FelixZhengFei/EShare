@@ -23,6 +23,7 @@ PODS:
   - SVProgressHUD (2.2.5)
   - SwiftyUserDefaults (3.0.1)
   - TZImagePickerController (2.1.8)
+  - WechatOpenSDK (1.8.2)
 
 DEPENDENCIES:
   - BYToolModule
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - SVProgressHUD
   - SwiftyUserDefaults
   - TZImagePickerController
+  - WechatOpenSDK
 
 SPEC CHECKSUMS:
   BYToolModule: 9bd4603c1d92c7e4a8b1adb6723be3cf5d30c87d
@@ -47,7 +49,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   TZImagePickerController: c2c75f3d5c6b9c634185ecb458df66d0aab8bbae
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
 
-PODFILE CHECKSUM: f725de09c022ea661a808d03b1157616a38d75c9
+PODFILE CHECKSUM: 2d1c23ea1ce5d28b5b2ddd0a0273c37f73fff735
 
 COCOAPODS: 1.4.0

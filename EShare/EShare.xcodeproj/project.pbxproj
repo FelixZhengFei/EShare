@@ -517,6 +517,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -537,6 +541,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = EE.EShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
