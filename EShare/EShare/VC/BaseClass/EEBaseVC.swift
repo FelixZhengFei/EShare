@@ -1,5 +1,5 @@
 //
-//  XLBaseVC.swift
+//  EEBaseVC.swift
 //  SDYQ
 //
 //  Created by 陈学明 on 2017/11/28.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class XLBaseVC: UIViewController {
+class EEBaseVC: UIViewController {
     
     /**导航栏*/
-    lazy var navigationHeaderView: XLNavBar = { ()->XLNavBar in
-        let navview = XLNavBar(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 64))
+    lazy var navigationHeaderView: EENavBar = { ()->EENavBar in
+        let navview = EENavBar(frame: CGRect(x: 0, y: 0, width: SCREEN_W, height: 64))
         return navview
     }();
     
@@ -52,7 +52,7 @@ class XLBaseVC: UIViewController {
     
 }
 // MARK: - 配置基本信息
-extension XLBaseVC {
+extension EEBaseVC {
     /**配置基本信息*/
     fileprivate func setUpUI() {
         self.view.addSubview(navigationHeaderView)

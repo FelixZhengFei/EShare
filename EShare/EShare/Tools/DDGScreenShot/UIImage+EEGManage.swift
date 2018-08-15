@@ -1,16 +1,16 @@
 //
-//  UIImage+DDGManage.swift
-//  DDGScreenshot
+//  UIImage+EEGManage.swift
+//  EEGScreenshot
 //
-//  Created by dudongge on 2018/3/28.
-//  Copyright © 2018年 dudongge. All rights reserved.
+//  Created by 郑强飞 on 2018/3/28.
+//  Copyright © 2018年 郑强飞. All rights reserved.
 //
 
 import UIKit
 import ObjectiveC
 
-class DDGManage: NSObject {
-    static var share = DDGManage()
+class EEGManage: NSObject {
+    static var share = EEGManage()
     public func composeImageWithLogo( bgImage: UIImage,
                                imageRect: [CGRect],
                                images:[UIImage]) -> UIImage {

@@ -21,13 +21,13 @@ private var hud: MBProgressHUD?  //全局变量
 private var type:HUDType = HUDType.none
 
 ///错误提示框
-class SMWrongAlert: NSObject {
+class EEWrongAlert: NSObject {
     
     class func show(_ text:String) {
         if text == "" {
             return
         }
-        let wrongView = SMWrongAlert.initialization()
+        let wrongView = EEWrongAlert.initialization()
         type=HUDType.text
         let themeColor = UIColor.white  //主题颜色
         let keyWindow = UIApplication.shared.keyWindow
@@ -45,13 +45,13 @@ class SMWrongAlert: NSObject {
         wrongView.label.numberOfLines = 0;
         wrongView.detailsLabel.text=nil
         wrongView.show(animated: true)
-        SMWrongAlert.hide(animated: true, afterDelay: 1.5)
+        EEWrongAlert.hide(animated: true, afterDelay: 1.5)
     }
     
     //MARK: 显示HUD
     /**显示文字*/
     class func show(text:String,detailText:String,toView:UIView,animated:Bool,hideAfterDelay:TimeInterval) {
-        let wrongView = SMWrongAlert.initialization()
+        let wrongView = EEWrongAlert.initialization()
         if type != HUDType.text {
             type=HUDType.text
             let themeColor = UIColor.white  //主题颜色
@@ -71,7 +71,7 @@ class SMWrongAlert: NSObject {
             wrongView.show(animated: animated)
             if hideAfterDelay>0
             {
-                SMWrongAlert.hide(animated: animated, afterDelay: hideAfterDelay)
+                EEWrongAlert.hide(animated: animated, afterDelay: hideAfterDelay)
             }
         } else {
             wrongView.label.text=text
@@ -81,7 +81,7 @@ class SMWrongAlert: NSObject {
     
     /**显示小菊花*/
     class func showRunning() {
-        let wrongView = SMWrongAlert.initialization()
+        let wrongView = EEWrongAlert.initialization()
             type=HUDType.indicator
             let themeColor = UIColor.white  //主题颜色
             let toView = UIApplication.shared.keyWindow!
@@ -102,7 +102,7 @@ class SMWrongAlert: NSObject {
     
     /**显示小菊花*/
     class func showActivityIndicator(text:String,detailText:String,toView:UIView,animated:Bool) {
-        let wrongView = SMWrongAlert.initialization()
+        let wrongView = EEWrongAlert.initialization()
         if type != HUDType.indicator {
             type=HUDType.indicator
             let themeColor = UIColor.white  //主题颜色
@@ -129,7 +129,7 @@ class SMWrongAlert: NSObject {
     
     /**显示水平进度条*/
     class func showProgressBar(text:String,detailText:String,progress:Float,toView:UIView,animated:Bool) {
-        let wrongView = SMWrongAlert.initialization()
+        let wrongView = EEWrongAlert.initialization()
         if type != HUDType.progressBar {
             type=HUDType.progressBar
             let themeColor = UIColor.white  //主题颜色
@@ -152,25 +152,25 @@ class SMWrongAlert: NSObject {
             wrongView.label.text=text
             wrongView.progress=progress
             if progress>=1 {
-                SMWrongAlert.hide()
+                EEWrongAlert.hide()
             }
         }
     }
     
     /**显示成功提示*/
     class func showSuccess(text:String,detailText:String,toView:UIView,animated:Bool,afterDelay:TimeInterval) {
-        SMWrongAlert.showCustomView(text: text, detailText: detailText, image:#imageLiteral(resourceName: "action_success"), toView: toView, animated: animated, afterDelay: afterDelay)
+        EEWrongAlert.showCustomView(text: text, detailText: detailText, image:#imageLiteral(resourceName: "action_success"), toView: toView, animated: animated, afterDelay: afterDelay)
     }
     
     /**显示错误提示*/
     class func showFailure(text:String,detailText:String,toView:UIView,animated:Bool,afterDelay:TimeInterval) {
-        SMWrongAlert.showCustomView(text: text, detailText: detailText, image:#imageLiteral(resourceName: "action_fail"), toView: toView, animated: animated, afterDelay: afterDelay)
+        EEWrongAlert.showCustomView(text: text, detailText: detailText, image:#imageLiteral(resourceName: "action_fail"), toView: toView, animated: animated, afterDelay: afterDelay)
     }
     
     
     /**显示自定义视图*/
     fileprivate class func showCustomView(text:String,detailText:String,image:UIImage,toView:UIView,animated:Bool,afterDelay:TimeInterval) {
-        let wrongView = SMWrongAlert.initialization()
+        let wrongView = EEWrongAlert.initialization()
         if type != HUDType.customView {
             type=HUDType.customView
             let themeColor = UIColor.white  //主题颜色
@@ -190,14 +190,14 @@ class SMWrongAlert: NSObject {
             wrongView.customView=UIImageView.init(image: image)
             wrongView.show(animated: animated)
             if afterDelay>0 {
-                SMWrongAlert.hide(animated: animated, afterDelay: afterDelay)
+                EEWrongAlert.hide(animated: animated, afterDelay: afterDelay)
             }
         }
     }
     
     //MARK: 隐藏HUD
     class func hide() {
-        SMWrongAlert.hide(animated: false, afterDelay: 0)
+        EEWrongAlert.hide(animated: false, afterDelay: 0)
     }
     
     class func hide(animated: Bool,afterDelay:TimeInterval) {

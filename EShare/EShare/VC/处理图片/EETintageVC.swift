@@ -8,57 +8,54 @@
 
 import UIKit
 
-class EETintageVC: XLBaseVC {
+class EETintageVC: EEBaseVC {
     public var originalImage:UIImage!
     fileprivate var borowView: EEImageBroweView!
+    fileprivate lazy var shareView = EEShareAlertView.ff_LoadXib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "魔彩"
-        self.view.backgroundColor = UIColor.ff_HexColor(0xF4F5F6)
+        self.view.backgroundColor = UIColor.white
         configShowImageView()
         configBottomButtons()
         configRightButton()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
+// MARK: - 私有方法
+extension EETintageVC {
+    
+    /**配置UI*/
     fileprivate  func configShowImageView() {
-        
         originalImage = originalImage.waterMarkedImage(waterMarkImage: #imageLiteral(resourceName: "shuiyin"), corner: .BottomRight, margin: CGPoint(x: 25, y: 25), alpha: 1)
         originalImage = originalImage.waterMarkedImage(waterMarkText: "来自 U-Share", corner: .BottomRight, margin: CGPoint(x: 10, y: 10), waterMarkTextColor: UIColor.ff_HexColor(0xFF8240), waterMarkTextFont: UIFont.systemFont(ofSize: 12, weight: .regular), backgroundColor: UIColor.clear)
-
+        
         
         let imageHeight = (FScreen_H - FNavgationBar_H - 10 - 120)
         borowView = EEImageBroweView(frame: CGRect(x:5, y: FNavgationBar_H + 5, width: FScreen_W - 10, height: imageHeight))
         borowView.viewAddLayerCorner(cornerRadius: 5, UIColor.ff_HexColor(0xFd6547))
-        borowView.recordImage = originalImage
-        borowView.loadImage()
+        borowView.originImage = originalImage
+        borowView.configImage()
         self.view.addSubview(borowView)
     }
     
+    /**配置导航右键*/
     fileprivate func configRightButton() {
         let rightButton = UIButton(type: .custom)
         rightButton.frame = CGRect(x: FScreen_W - 44, y:FStatusBar_H, width: 44, height: 44)
         rightButton.setBackgroundImage(#imageLiteral(resourceName: "nav_nemu"), for: .normal)
         rightButton.setBackgroundImage(#imageLiteral(resourceName: "nav_nemu"), for:.highlighted)
-        rightButton.addTarget(self, action: #selector(showToWeiXin), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(configShareAlertView), for: .touchUpInside)
         self.navigationHeaderView.addSubview(rightButton)
     }
     
-    @objc fileprivate func showToWeiXin() {
-        let message = WXMediaMessage()
-        message.setThumbImage(#imageLiteral(resourceName: "btn_nor"))
-        let imageObject = WXImageObject()
-        imageObject.imageData = UIImagePNGRepresentation(self.borowView.imageView.image!)
-        message.mediaObject = imageObject
-        
-        let req = SendMessageToWXReq()
-        req.text = "分享图片测试"
-        req.bText = false
-        req.message = message
-        req.scene = Int32(WXSceneSession.rawValue)
-        WXApi.send(req)
-    }
     
+    /**底部按键*/
     fileprivate func configBottomButtons() {
         var button_Y = FScreen_H - 120
         
@@ -80,7 +77,7 @@ class EETintageVC: XLBaseVC {
             changeBtn.tag = 100 + i
             changeBtn.frame = CGRect(x: btn_X, y: 0, width: btnWidth  , height: btnWidth )
             changeBtn.setImage(UIImage(named: "icon_\(i)"), for: .normal)
-            changeBtn.addTarget(self, action: #selector(addImageFilter(changeBtn:)), for: .touchUpInside)
+            changeBtn.addTarget(self, action: #selector(filertImageMethods(changeBtn:)), for: .touchUpInside)
             bottonScollView.addSubview(changeBtn)
             btn_X = 15 + (btnWidth + 5) * CGFloat(i+1)
         }
@@ -88,32 +85,82 @@ class EETintageVC: XLBaseVC {
         bottonScollView.contentSize = CGSize(width: btn_X + 10, height: 60)
     }
     
-    @objc func addImageFilter(changeBtn: UIButton) {
-        resetBtn()
-        SMWrongAlert.show(text: "", detailText: "处理中...", toView: UIApplication.shared.keyWindow!, animated: true, hideAfterDelay: 1)
+    //分享页面
+    @objc fileprivate func configShareAlertView() {
+        shareView.frame = CGRect(x: 0, y: 0, width: FScreen_W, height: FScreen_H)
+        self.view.addSubview(shareView)
+        weak var weakSelf = self
+        shareView.saveImageBlock = {
+            weakSelf?.saveImageButtonClicked()
+        }
+        shareView.shareFriendsBlock = {
+            weakSelf?.showToWeiXinFrinds(WXSceneSession)
+        }
+        shareView.sharePengyouQuanBlock = {
+            weakSelf?.showToWeiXinFrinds(WXSceneTimeline)
+        }
+    }
+    
+    /**保存到相册*/
+    fileprivate func saveImageButtonClicked() {
+        UIImageWriteToSavedPhotosAlbum(borowView.imageView.image!, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
+        if error != nil {
+            FFPrint("错误")
+            return
+        }
+        FFPrint("OK")
+        EEWrongAlert.show("保存图片成功")
+    }
+    
+    /*分享到微信*/
+    fileprivate func showToWeiXinFrinds(_ scene:WXScene) {
+        let message = WXMediaMessage()
+        message.setThumbImage(#imageLiteral(resourceName: "btn_nor"))
+        let imageObject = WXImageObject()
+        imageObject.imageData = UIImagePNGRepresentation(self.borowView.imageView.image!)
+        message.mediaObject = imageObject
+        
+        let req = SendMessageToWXReq()
+        req.text = ""
+        req.bText = false
+        req.message = message
+        req.scene = Int32(scene.rawValue)
+        WXApi.send(req)
+    }
+}
+
+// MARK: - 图片处理
+extension EETintageVC {
+    
+    /**渲染*/
+    @objc func filertImageMethods(changeBtn: UIButton) {
+        EEWrongAlert.show(text: "", detailText: "处理中...", toView: UIApplication.shared.keyWindow!, animated: true, hideAfterDelay: 1)
         switch changeBtn.tag - 100 {
         case 0:
-            let newImage = DDGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectInstant")
+            let newImage = EEGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectInstant")
             self.borowView.imageView.image = newImage
         case 1:
             weak var ws = self
-            DDGManage.share.async_imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectNoir") { (newImage) in
+            EEGManage.share.async_imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectNoir") { (newImage) in
                 ws!.borowView.imageView.image = newImage
             }
         case 2:
-            let newImage = DDGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectTonal")
+            let newImage = EEGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectTonal")
             self.borowView.imageView.image = newImage
         case 3:
-            let newImage = DDGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectTransfer")
+            let newImage = EEGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectTransfer")
             self.borowView.imageView.image = newImage
         case 4:
-            let newImage = DDGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectMono")
+            let newImage = EEGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectMono")
             self.borowView.imageView.image = newImage
         case 5:
-            let newImage = DDGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectFade")
+            let newImage = EEGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectFade")
             self.borowView.imageView.image = newImage
         case 6:
-            let newImage = DDGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectProcess")
+            let newImage = EEGManage.share.imageFilterHandel(image: originalImage, filterName: "CIPhotoEffectProcess")
             self.borowView.imageView.image = newImage
         case 7:
             self.borowView.imageView.image = originalImage
@@ -121,16 +168,4 @@ class EETintageVC: XLBaseVC {
             break
         }
     }
-    
-    func resetBtn() {
-        for views in self.view.subviews {
-            if views.tag - 100 <= 10 {
-                views.backgroundColor = UIColor.white
-            }
-        }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
 }

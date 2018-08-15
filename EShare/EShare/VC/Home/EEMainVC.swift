@@ -9,7 +9,7 @@
 import UIKit
 import FFToolModule
 
-class EEMainVC: XLBaseVC {
+class EEMainVC: EEBaseVC {
 
     @IBOutlet weak var serchButton: UIButton!
     @IBOutlet weak var textFiled: UITextField!
@@ -30,7 +30,7 @@ class EEMainVC: XLBaseVC {
     }
     
     @IBAction func searchButtonClicked(_ sender: Any) {
-        let wKWebViewShot = DDGWKWebViewShot()
+        let wKWebViewShot = EEWebView()
 //        wKWebViewShot.urlString = textFiled.text
         wKWebViewShot.urlString = "https://www.baidu.com"
         self.navigationController?.pushViewController(wKWebViewShot, animated: true)

@@ -1,5 +1,5 @@
 //
-//  XLNavBar.swift
+//  EENavBar.swift
 //  SDYQ
 //
 //  Created by 陈学明 on 2017/11/28.
@@ -9,7 +9,7 @@
 import UIKit
 import SDAutoLayout
 
-class XLNavBar: UIView {
+class EENavBar: UIView {
     public var titleLabel:UILabel!
     public var leftButton:UIButton!
     public var line:UIView!

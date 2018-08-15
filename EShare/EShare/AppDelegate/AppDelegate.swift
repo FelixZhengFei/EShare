@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
         window = UIWindow()
         window?.frame = UIScreen.main.bounds
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = XLNavgationVC(rootViewController: EEMainVC())
+        window?.rootViewController = EENavgationVC(rootViewController: EEMainVC())
         window?.makeKeyAndVisible()
     }
     

@@ -37,6 +37,12 @@
 	<array>
 		<string>weixin</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>为了能够拍摄您的生活照片</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>为了能够保存截取好的长图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>为了能够保存截取好的长图片</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

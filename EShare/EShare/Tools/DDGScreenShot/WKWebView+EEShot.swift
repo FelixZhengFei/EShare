@@ -1,8 +1,8 @@
 //
-//  WKWebView+DDGShot.swift
+//  WKWebView+EEGShot.swift
 //  lottery
 //
-//  Created by dudongge on 2018/3/10.
+//  Created by 郑强飞 on 2018/3/10.
 //  Copyright © 2018年 CP. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import WebKit
 
 public extension WKWebView {
     
-    public func DDGContentScreenShot(_ completionHandler:@escaping (_ screenShotImage: UIImage?) -> Void) {
+    public func EEGContentScreenShot(_ completionHandler:@escaping (_ screenShotImage: UIImage?) -> Void) {
         
         self.isShoting = true
         
@@ -30,7 +30,7 @@ public extension WKWebView {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.3 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { () -> Void in
             self.scrollView.contentOffset = CGPoint.zero
             
-            self.DDGContentScreenShotWithoutOffset({ [weak self] (screenShotImage) -> Void in
+            self.EEGContentScreenShotWithoutOffset({ [weak self] (screenShotImage) -> Void in
                 let strongSelf = self!
                 
                 strongSelf.scrollView.contentOffset = offset
@@ -44,7 +44,7 @@ public extension WKWebView {
         }
     }
     
-    fileprivate func DDGContentScreenShotWithoutOffset(_ completionHandler:@escaping (_ screenShotImage: UIImage?) -> Void) {
+    fileprivate func EEGContentScreenShotWithoutOffset(_ completionHandler:@escaping (_ screenShotImage: UIImage?) -> Void) {
         let containerView  = UIView(frame: self.bounds)
         
         let bakFrame     = self.frame
@@ -64,7 +64,7 @@ public extension WKWebView {
         
         UIGraphicsBeginImageContextWithOptions(totalSize, false, UIScreen.main.scale)
         
-        self.DDGContentPageDraw(containerView, index: 0, maxIndex: Int(page), drawCallback: { [weak self] () -> Void in
+        self.EEGContentPageDraw(containerView, index: 0, maxIndex: Int(page), drawCallback: { [weak self] () -> Void in
             let strongSelf = self!
             
             let screenShotImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -82,7 +82,7 @@ public extension WKWebView {
         })
     }
     
-    fileprivate func DDGContentPageDraw (_ targetView: UIView, index: Int, maxIndex: Int, drawCallback: @escaping () -> Void) {
+    fileprivate func EEGContentPageDraw (_ targetView: UIView, index: Int, maxIndex: Int, drawCallback: @escaping () -> Void) {
         
         // set up split frame of super view
         let splitFrame = CGRect(x: 0, y: CGFloat(index) * targetView.frame.size.height, width: targetView.bounds.size.width, height: targetView.frame.size.height)
@@ -95,7 +95,7 @@ public extension WKWebView {
             targetView.drawHierarchy(in: splitFrame, afterScreenUpdates: true)
             
             if index < maxIndex {
-                self.DDGContentPageDraw(targetView, index: index + 1, maxIndex: maxIndex, drawCallback: drawCallback)
+                self.EEGContentPageDraw(targetView, index: index + 1, maxIndex: maxIndex, drawCallback: drawCallback)
             }else{
                 drawCallback()
             }

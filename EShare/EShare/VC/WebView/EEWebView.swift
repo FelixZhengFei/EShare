@@ -1,15 +1,15 @@
 //
-//  DDGWKWebViewShot.swift
-//  DDGScreenshot
+//  EEWebView.swift
+//  EEGScreenshot
 //
-//  Created by dudongge on 2018/3/19.
-//  Copyright © 2018年 dudongge. All rights reserved.
+//  Created by 郑强飞 on 2018/3/19.
+//  Copyright © 2018年 郑强飞. All rights reserved.
 //
 
 import UIKit
 import WebKit
 
-class DDGWKWebViewShot: XLBaseVC ,WKUIDelegate,WKNavigationDelegate {
+class EEWebView: EEBaseVC ,WKUIDelegate,WKNavigationDelegate {
     fileprivate var wkWebView: WKWebView?
     fileprivate var storeImageView = EESoreImageView()
     
@@ -21,24 +21,25 @@ class DDGWKWebViewShot: XLBaseVC ,WKUIDelegate,WKNavigationDelegate {
         configWebView()
         configBottomViews()
         openStringURL()
+        self.view.backgroundColor = UIColor.white
     }
     
     //打开链接
     fileprivate func openStringURL() {
         guard let path = URL(string:urlString ?? "") else {
-                        SMWrongAlert.show("打开的网址错误")
+            EEWrongAlert.show("打开的网址错误")
             return
         }
         wkWebView?.load(URLRequest(url: path))
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 
 // MARK: - 私有方法
-extension DDGWKWebViewShot {
+extension EEWebView {
     
     /**webview*/
     fileprivate func configWebView() {
@@ -49,7 +50,7 @@ extension DDGWKWebViewShot {
         self.view.addSubview(wkWebView!)
         wkWebView?.uiDelegate = self
         wkWebView?.navigationDelegate = self
-        wkWebView?.backgroundColor = UIColor.clear
+        wkWebView?.backgroundColor = UIColor.white
         wkWebView?.allowsBackForwardNavigationGestures = true
     }
     
@@ -62,7 +63,7 @@ extension DDGWKWebViewShot {
         cutButton.setTitleColor(UIColor.white, for: .normal)
         cutButton.setBackgroundImage(#imageLiteral(resourceName: "btn_nor"), for: .normal)
         cutButton.setBackgroundImage(#imageLiteral(resourceName: "btn_pre"), for: .highlighted)
-        cutButton.addTarget(self, action: #selector(DDGWKWebViewShot.screenShotWebView), for: .touchUpInside)
+        cutButton.addTarget(self, action: #selector(EEWebView.screenShotWebView), for: .touchUpInside)
         cutButton.frame = CGRect(x: 0, y:0, width: FScreen_W, height: 50)
         cutButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         bottowView.addSubview(cutButton)
@@ -70,9 +71,9 @@ extension DDGWKWebViewShot {
     
     @objc func screenShotWebView() {
         weak var weakSelf = self
-        SMWrongAlert.showActivityIndicator(text: "", detailText: "图片生成中...", toView: UIApplication.shared.keyWindow!, animated: true)
-        wkWebView?.DDGContentScreenShot { (image) in
-            SMWrongAlert.hide()
+        EEWrongAlert.showActivityIndicator(text: "", detailText: "图片生成中...", toView: UIApplication.shared.keyWindow!, animated: true)
+        wkWebView?.EEGContentScreenShot { (image) in
+            EEWrongAlert.hide()
             if image != nil {
                 weakSelf?.showStoreView(image!)
             }
@@ -81,7 +82,7 @@ extension DDGWKWebViewShot {
     
     fileprivate func showStoreView(_ image:UIImage) {
         weak var weakSelf = self
-
+        
         storeImageView.frame = CGRect(x: 0, y: 0, width: FScreen_W, height: FScreen_H)
         self.view.addSubview(storeImageView)
         storeImageView.updateViewWithImage(image)
@@ -95,7 +96,7 @@ extension DDGWKWebViewShot {
 
 
 // MARK: - WKWebViewDelegate
-extension DDGWKWebViewShot {
+extension EEWebView {
     //在发送请求之前，决定是否跳转
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         decisionHandler(.allow)
