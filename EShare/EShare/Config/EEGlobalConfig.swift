@@ -20,6 +20,10 @@ let TEXT_COLOR = UIColor.ff_HexColor(0x333333)
 //MARK: ************************常用值配置************************
 /**微信Key*/
 let WeChat_KEY:String = "wxad505531f7cf972d"
+/**微信Key*/
+let Sina_KEY:String = "1254661597"
+
+
 /**屏幕宽度 */
 /**屏幕Bounds */
 let SCREEN_B:CGRect    = UIScreen.main.bounds

@@ -10,5 +10,6 @@ pod 'BYToolModule’
 pod 'LEEAlert'
 pod 'MBProgressHUD'
 pod 'WechatOpenSDK'
+pod 'Weibo_SDK'
 
 end

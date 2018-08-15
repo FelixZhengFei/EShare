@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate,WeiboSDKDelegate {
 
     var window: UIWindow?
 
@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         initWindow()
         configWeiChat()
+        configSina()
         return true
     }
 
@@ -28,14 +29,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
         window?.makeKeyAndVisible()
     }
     
+    /**新浪*/
+    fileprivate func configSina() {
+        WeiboSDK.registerApp(Sina_KEY)
+    }
+    
+    /**微信*/
     fileprivate func configWeiChat() {
         WXApi.registerApp(WeChat_KEY)
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let urlKey: String? = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
+        
+        if urlKey != nil && urlKey == "com.sina.weibo" {
+            return WeiboSDK.handleOpen(url, delegate: self)
+        }
         return WXApi.handleOpen(url, delegate: self)
     }
 
+//    // 新浪微博的H5网页登录回调需要实现这个方法
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.scheme == "URL Schemes" {
+            return true
+        }
+        return true
+    }
+    
     func onResp(_ resp: BaseResp!) {
         if resp.isKind(of: SendMessageToWXResp.self) {//确保是对我们分享操作的回调
             if resp.errCode == WXSuccess.rawValue{//分享成功
@@ -50,6 +70,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate {
                 print("分享失败：授权失败")
             }else if resp.errCode == WXErrCodeUnsupport.rawValue {//微信不支持
                 print("分享失败：微信不支持")
+            }
+        }
+    }
+
+    
+    func didReceiveWeiboRequest(_ request: WBBaseRequest!) {
+        
+    }
+    
+    func didReceiveWeiboResponse(_ response: WBBaseResponse!) {
+        
+        if response is WBSendMessageToWeiboResponse {
+            let rm = response as! WBSendMessageToWeiboResponse
+            
+            if rm.statusCode == WeiboSDKResponseStatusCode.success {
+                // 成功
+                print("分享成功")
+                let userInfo = rm.requestUserInfo // request 中设置的自定义信息
+                
+                print("分享成功\n\(userInfo ?? ["假的": ""])")
+            } else {
+                // 失败
+                print("分享失败")
             }
         }
     }

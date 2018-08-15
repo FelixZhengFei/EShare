@@ -93,6 +93,9 @@ extension EETintageVC {
         shareView.sharePengyouQuanBlock = {
             weakSelf?.showToWeiXinFrinds(WXSceneTimeline)
         }
+        shareView.shareSinaBlock = {
+            weakSelf?.shareTextToSina()
+        }
     }
     
     /**保存到相册*/
@@ -101,26 +104,10 @@ extension EETintageVC {
         UIImageWriteToSavedPhotosAlbum(saveImage, self, #selector(image(image:didFinishSavingWithError:contextInfo:)), nil)
     }
     
-    /**滤镜*/
-    fileprivate func filerImageWithShuiYin()->UIImage {
-        var tempImage = originalImage.waterMarkedImage(waterMarkImage: #imageLiteral(resourceName: "shuiyin"), corner: .BottomRight, margin: CGPoint(x: 25, y: 25), alpha: 1)
-        tempImage = tempImage.waterMarkedImage(waterMarkText: "来自E-Filter", corner: .BottomRight, margin: CGPoint(x: 10, y: 10), waterMarkTextColor: UIColor.ff_HexColor(0xFF8240), waterMarkTextFont: UIFont.systemFont(ofSize: 12, weight: .regular), backgroundColor: UIColor.clear)
-        return tempImage
-    }
-    
-    @objc func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
-        if error != nil {
-            FFPrint("错误")
-            return
-        }
-        FFPrint("OK")
-        EEWrongAlert.show("保存图片成功")
-    }
-    
     /*分享到微信*/
     fileprivate func showToWeiXinFrinds(_ scene:WXScene) {
         let message = WXMediaMessage()
-//        message.setThumbImage(#imageLiteral(resourceName: "btn_nor"))
+//        message.setThumbImage(#imageLiteral(resourceName: "btn_nor"))//FIXMe
         let imageObject = WXImageObject()
         let saveImage = filerImageWithShuiYin()
         imageObject.imageData = UIImagePNGRepresentation(saveImage)
@@ -132,10 +119,43 @@ extension EETintageVC {
         req.scene = Int32(scene.rawValue)
         WXApi.send(req)
     }
+    
+    /**分享到新浪*/
+   fileprivate func shareTextToSina() {
+        
+        let authReq = WBAuthorizeRequest()
+        authReq.redirectURI = ""
+        authReq.scope = "all"
+        let message = WBMessageObject()
+        message.text = "这是来自到U-Screen的一张图片"
+        let img = WBImageObject()
+        let saveImage = filerImageWithShuiYin()
+        let imgData = UIImageJPEGRepresentation(saveImage, 1)
+        img.imageData = imgData!
+        message.imageObject = img
+        let req: WBSendMessageToWeiboRequest = WBSendMessageToWeiboRequest.request(withMessage: message, authInfo: authReq, access_token: nil) as! WBSendMessageToWeiboRequest
+        req.userInfo = ["info": "分享的图片"]
+        req.shouldOpenWeiboAppInstallPageIfNotInstalled = false
+        WeiboSDK.send(req)
+    }
 }
 
 // MARK: - 图片处理
 extension EETintageVC {
+    
+    /**滤镜*/
+    fileprivate func filerImageWithShuiYin()->UIImage {
+        var tempImage = self.borowView.imageView.image!.waterMarkedImage(waterMarkImage: #imageLiteral(resourceName: "shuiyin"), corner: .BottomRight, margin: CGPoint(x: 25, y: 25), alpha: 1)
+        tempImage = tempImage.waterMarkedImage(waterMarkText: "来自U-Screen", corner: .BottomRight, margin: CGPoint(x: 10, y: 10), waterMarkTextColor: UIColor.ff_HexColor(0xFF8240), waterMarkTextFont: UIFont.systemFont(ofSize: 12, weight: .regular), backgroundColor: UIColor.clear)
+        return tempImage
+    }
+    
+    @objc func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
+        if error != nil {
+            return
+        }
+        EEWrongAlert.show("保存图片成功")
+    }
     
     /**渲染*/
     @objc func filertImageMethods(changeBtn: UIButton) {

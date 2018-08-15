@@ -31,18 +31,17 @@ class EEMainVC: EEBaseVC,UITextFieldDelegate {
     }
     
     @IBAction func searchButtonClicked() {
-    
         var urlString = textFiled.text!
         if urlString.count <= 0 {
             EEWrongAlert.show("请输入您要截图的网页地址")
             return
         }
         if urlString.hasPrefix("http://") ||  urlString.hasPrefix("https://") {
-            
+
         } else {
             urlString = "http://" + urlString
         }
-        
+
         if !isVarulURl(urlString){
             EEWrongAlert.show("请输入正确网页地址")
             return

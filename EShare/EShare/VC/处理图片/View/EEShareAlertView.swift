@@ -19,6 +19,7 @@ class EEShareAlertView: UIView,FFLoadXibProtocol {
     public var saveImageBlock:(() -> Void)?
     public var shareFriendsBlock:(() -> Void)?
     public var sharePengyouQuanBlock:(() -> Void)?
+    public var shareSinaBlock:(() -> Void)?
 
     override func awakeFromNib() {
         cancleButton.viewAddLayerCorner(cornerRadius: 10, UIColor.clear)
@@ -35,18 +36,31 @@ class EEShareAlertView: UIView,FFLoadXibProtocol {
     @IBAction func savetPhotoClicked(_ sender: Any) {
         if saveImageBlock != nil {
             saveImageBlock!()
+            self.removeFromSuperview()
+
+        }
+    }
+    @IBAction func sinaButtonClicked(_ sender: Any) {
+        if shareSinaBlock != nil {
+            shareSinaBlock!()
+            self.removeFromSuperview()
+
         }
     }
     
     @IBAction func shareWeixinButtonClicked(_ sender: Any) {
         if shareFriendsBlock != nil {
             shareFriendsBlock!()
+            self.removeFromSuperview()
+
         }
     }
     
     @IBAction func pengyouQuanButtonClicked(_ sender: Any) {
         if sharePengyouQuanBlock != nil {
             sharePengyouQuanBlock!()
+            self.removeFromSuperview()
+
         }
     }
     

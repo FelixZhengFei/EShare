@@ -21,6 +21,7 @@ PODS:
   - SDWebImage/Core (4.4.1)
   - TZImagePickerController (2.1.8)
   - WechatOpenSDK (1.8.2)
+  - Weibo_SDK (3.2.3)
 
 DEPENDENCIES:
   - BYToolModule
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - SDWebImage
   - TZImagePickerController
   - WechatOpenSDK
+  - Weibo_SDK
 
 SPEC CHECKSUMS:
   BYToolModule: 9bd4603c1d92c7e4a8b1adb6723be3cf5d30c87d
@@ -41,7 +43,8 @@ SPEC CHECKSUMS:
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   TZImagePickerController: c2c75f3d5c6b9c634185ecb458df66d0aab8bbae
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+  Weibo_SDK: 652ca78c2f7147a5de5e75e7cbea89838a81772a
 
-PODFILE CHECKSUM: 1efcef2d4e4ea79244a2ebb2803c5d7fbeed09f2
+PODFILE CHECKSUM: bcf6d24dc9a66ddeb162364abcc0293441a7edd5
 
 COCOAPODS: 1.4.0
