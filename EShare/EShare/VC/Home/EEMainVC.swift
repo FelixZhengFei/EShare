@@ -126,11 +126,15 @@ extension EEMainVC {
     }
     /**常用网站*/
     @objc func histrouButtonClicked(_ button:UIButton) {
-        let dic = dataSorceAry[button.tag] as! [String:String]
-        let urlString = dic["url"]!
-        let wKWebViewShot = EEWebView()
-        wKWebViewShot.urlString = urlString
-        self.navigationController?.pushViewController(wKWebViewShot, animated: true)
+        //fixme
+        let vc = EEHeChengVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let dic = dataSorceAry[button.tag] as! [String:String]
+//        let urlString = dic["url"]!
+//        let wKWebViewShot = EEWebView()
+//        wKWebViewShot.urlString = urlString
+//        self.navigationController?.pushViewController(wKWebViewShot, animated: true)
     }
 }
 

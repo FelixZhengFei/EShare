@@ -26,6 +26,9 @@
 		762E26252122FCEC0077F8DD /* EETintageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26242122FCEC0077F8DD /* EETintageVC.swift */; };
 		762E26272123069A0077F8DD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762E26262123069A0077F8DD /* WebKit.framework */; };
 		762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E262A2123087A0077F8DD /* EEImageBroweView.swift */; };
+		76E92797212542E4007F0C9D /* FFCameralPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E92796212542E4007F0C9D /* FFCameralPlugin.swift */; };
+		76E927992125432A007F0C9D /* EEHeChengVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E927982125432A007F0C9D /* EEHeChengVC.swift */; };
+		76E9279C2125440B007F0C9D /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E9279B2125440B007F0C9D /* UploadImageModel.swift */; };
 		76F0DB772123D49B00455BC3 /* EEShareAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DB762123D49B00455BC3 /* EEShareAlertView.swift */; };
 		76F0DB792123D4DB00455BC3 /* EEShareAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76F0DB782123D4DB00455BC3 /* EEShareAlertView.xib */; };
 		76F0DB7F2124103200455BC3 /* EEAboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DB7D2124103200455BC3 /* EEAboutUsVC.swift */; };
@@ -56,6 +59,9 @@
 		762E26242122FCEC0077F8DD /* EETintageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EETintageVC.swift; sourceTree = "<group>"; };
 		762E26262123069A0077F8DD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		762E262A2123087A0077F8DD /* EEImageBroweView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEImageBroweView.swift; sourceTree = "<group>"; };
+		76E92796212542E4007F0C9D /* FFCameralPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFCameralPlugin.swift; sourceTree = "<group>"; };
+		76E927982125432A007F0C9D /* EEHeChengVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEHeChengVC.swift; sourceTree = "<group>"; };
+		76E9279B2125440B007F0C9D /* UploadImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
 		76F0D0AB2123B71D00455BC3 /* EEBridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEBridgeHeader.h; sourceTree = "<group>"; };
 		76F0DB762123D49B00455BC3 /* EEShareAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEShareAlertView.swift; sourceTree = "<group>"; };
 		76F0DB782123D4DB00455BC3 /* EEShareAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EEShareAlertView.xib; sourceTree = "<group>"; };
@@ -152,9 +158,10 @@
 			children = (
 				762E25FE2122B9990077F8DD /* BaseClass */,
 				762E260B2122BEAD0077F8DD /* Home */,
-				762E261F2122DA0E0077F8DD /* WebView */,
-				76F0DB7A21240F3800455BC3 /* 关于 */,
+				762E261F2122DA0E0077F8DD /* 截取网页 */,
+				76E92795212542B0007F0C9D /* 合成图片 */,
 				762E26232122FC260077F8DD /* 处理图片 */,
+				76F0DB7A21240F3800455BC3 /* 关于 */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -197,13 +204,13 @@
 			path = DDGScreenShot;
 			sourceTree = "<group>";
 		};
-		762E261F2122DA0E0077F8DD /* WebView */ = {
+		762E261F2122DA0E0077F8DD /* 截取网页 */ = {
 			isa = PBXGroup;
 			children = (
 				762E26202122DA350077F8DD /* View */,
 				762E26152122BF210077F8DD /* EEWebView.swift */,
 			);
-			path = WebView;
+			path = "截取网页";
 			sourceTree = "<group>";
 		};
 		762E26202122DA350077F8DD /* View */ = {
@@ -217,6 +224,7 @@
 		762E26232122FC260077F8DD /* 处理图片 */ = {
 			isa = PBXGroup;
 			children = (
+				76E9279B2125440B007F0C9D /* UploadImageModel.swift */,
 				76F0DB752123D47D00455BC3 /* View */,
 				762E26242122FCEC0077F8DD /* EETintageVC.swift */,
 			);
@@ -226,6 +234,23 @@
 		76E9279021251166007F0C9D /* View */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76E92795212542B0007F0C9D /* 合成图片 */ = {
+			isa = PBXGroup;
+			children = (
+				76E9279A212543B3007F0C9D /* View */,
+				76E927982125432A007F0C9D /* EEHeChengVC.swift */,
+			);
+			path = "合成图片";
+			sourceTree = "<group>";
+		};
+		76E9279A212543B3007F0C9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76E92796212542E4007F0C9D /* FFCameralPlugin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,20 +355,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-EShare/Pods-EShare-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BYToolModule/BYToolModule.framework",
 				"${BUILT_PRODUCTS_DIR}/FFToolModule/FFToolModule.framework",
-				"${BUILT_PRODUCTS_DIR}/LEEAlert/LEEAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BYToolModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFToolModule.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LEEAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +418,7 @@
 				762E26112122BECC0077F8DD /* UIView+EEShot.swift in Sources */,
 				76F0DB772123D49B00455BC3 /* EEShareAlertView.swift in Sources */,
 				762E261C2122D9F40077F8DD /* EESoreImageView.swift in Sources */,
+				76E927992125432A007F0C9D /* EEHeChengVC.swift in Sources */,
 				762E26162122BF210077F8DD /* EEWebView.swift in Sources */,
 				76F0DB7F2124103200455BC3 /* EEAboutUsVC.swift in Sources */,
 				762E26252122FCEC0077F8DD /* EETintageVC.swift in Sources */,
@@ -410,6 +432,8 @@
 				762E26122122BECC0077F8DD /* UIImage+EEGManage.swift in Sources */,
 				762E26222122F9B10077F8DD /* EEWrongAlert.swift in Sources */,
 				762E26042122B9AB0077F8DD /* EENavBar.swift in Sources */,
+				76E92797212542E4007F0C9D /* FFCameralPlugin.swift in Sources */,
+				76E9279C2125440B007F0C9D /* UploadImageModel.swift in Sources */,
 				762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

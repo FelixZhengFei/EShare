@@ -42,12 +42,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EShare/VC/&#x5904;&#x7406;&#x56fe;&#x7247;/EETintageVC.swift"
-            timestampString = "556088910.81858"
+            timestampString = "556093448.450633"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
             landmarkName = "saveImageButtonClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EShare/VC/&#x5408;&#x6210;&#x56fe;&#x7247;/EEHeChengVC.swift"
+            timestampString = "556093448.450814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "configImagesWhenSelect()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
