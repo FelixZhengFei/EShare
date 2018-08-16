@@ -13,14 +13,17 @@ private let HIstroy_CELL_ID = "EEHomeHistroyCell"
 
 class EEMainVC: EEBaseVC,UITextFieldDelegate {
 
+    @IBOutlet weak var top_Y_Constarint: NSLayoutConstraint!
     @IBOutlet weak var serchButton: UIButton!
     @IBOutlet weak var textFiled: UITextField!
     fileprivate var dataSorceAry = [Any]()
     @IBOutlet weak var historyBaseView: UIView!
+    @IBOutlet weak var hechengButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "U-Screen"
+        top_Y_Constarint.constant = FNavgationBar_H
         setupForDismissKeyboard()
         self.hideBackButton()
         configUI()
@@ -33,7 +36,8 @@ class EEMainVC: EEBaseVC,UITextFieldDelegate {
     
     fileprivate func configUI() {
         textFiled.viewAddLayerCorner(cornerRadius: 10, UIColor.ff_HexColor(0x999999))
-        serchButton.viewAddLayerCorner(cornerRadius: 10, UIColor.clear)
+        serchButton.viewAddLayerCorner(cornerRadius: 40, UIColor.clear)
+        hechengButton.viewAddLayerCorner(cornerRadius: 40, UIColor.clear)
     }
     
     @IBAction func searchButtonClicked() {
@@ -62,6 +66,12 @@ class EEMainVC: EEBaseVC,UITextFieldDelegate {
         return true
     }
 
+    /**合成图片*/
+    @IBAction func heChengButtonCLicked(_ sender: Any) {
+        let vc = EEHeChengVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     //判断网页是否正确
     fileprivate func isVarulURl(_ sring:String)->Bool {
         let regex = "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$"
@@ -74,17 +84,15 @@ class EEMainVC: EEBaseVC,UITextFieldDelegate {
         let vc = EEAboutUsVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
 extension EEMainVC {
-   
     
-    fileprivate func  configHistyView() {
+    fileprivate func configHistyView() {
         configData()
         
-        let btnWidth:CGFloat = FScreen_W / 4
-        let btnHeight:CGFloat = 30
+        let btnWidth:CGFloat = FScreen_W / 6
+        let btnHeight:CGFloat = 20
         var btn_Y:CGFloat = 40
         var btn_X:CGFloat = 0
 
@@ -94,16 +102,15 @@ extension EEMainVC {
             changeBtn.frame = CGRect(x: btn_X, y: btn_Y, width: btnWidth  , height: btnHeight )
             changeBtn.addTarget(self, action: #selector(histrouButtonClicked(_:)), for: .touchUpInside)
             historyBaseView.addSubview(changeBtn)
-            changeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-            changeBtn.setTitleColor(UIColor.ff_HexColor(0x333333), for:.normal)
+            changeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            changeBtn.setTitleColor(UIColor.ff_HexColor(0x999999), for:.normal)
             let dic = dataSorceAry[i] as! [String:String]
             let nameString = dic["name"]!
             changeBtn.setTitle(nameString, for: .normal)
-            
-            btn_X = btnWidth * CGFloat((i % 4) + 1)
+            btn_X = btnWidth * CGFloat((i % 6) + 1)
             if btn_X >= FScreen_W {
                 btn_X = 0
-                btn_Y += btnHeight + 10
+                btn_Y += btnHeight + 5
             }
         }
     }
@@ -124,17 +131,14 @@ extension EEMainVC {
         dataSorceAry.append(["name":"58同城", "url":"http://hz.58.com/"])
 
     }
+    
     /**常用网站*/
     @objc func histrouButtonClicked(_ button:UIButton) {
-        //fixme
-        let vc = EEHeChengVC()
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-//        let dic = dataSorceAry[button.tag] as! [String:String]
-//        let urlString = dic["url"]!
-//        let wKWebViewShot = EEWebView()
-//        wKWebViewShot.urlString = urlString
-//        self.navigationController?.pushViewController(wKWebViewShot, animated: true)
+        let dic = dataSorceAry[button.tag] as! [String:String]
+        let urlString = dic["url"]!
+        let wKWebViewShot = EEWebView()
+        wKWebViewShot.urlString = urlString
+        self.navigationController?.pushViewController(wKWebViewShot, animated: true)
     }
 }
 

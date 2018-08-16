@@ -10,17 +10,20 @@ import UIKit
 
 class EEHeChengVC: EEBaseVC {
     
-    fileprivate var baseScollview = UIScrollView()
     fileprivate var dataSource = [UIImage]()
     fileprivate var colltionView : UICollectionView?
     fileprivate var noDataView = UIView()
-    fileprivate var rightButton = UIButton()
+    fileprivate var rightButton = UIButton() //右键
+    fileprivate var heChengButton = UIButton()//合成
+    fileprivate var storeImageView = EESoreImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "合成长图"
         initView()
+        configHeChengButton()
         configNoDataView()
+        updateViewStatus()
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,7 +59,7 @@ extension EEHeChengVC  {
         addButton.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
         addButton.frame = CGRect(x: (FScreen_W - 100)/2, y: 30, width: 100, height: 100)
         addButton.setTitleColor(UIColor.ff_HexColor(0xFF8200), for: .normal)
-        addButton.addTarget(self, action: #selector(configShareAlertView), for: .touchUpInside)
+        addButton.addTarget(self, action: #selector(openPhotoMethod), for: .touchUpInside)
         
         let label = UILabel(frame: CGRect(x: 0, y:105, width: FScreen_W, height: 20))
         label.text = "请选择图片"
@@ -78,30 +81,40 @@ extension EEHeChengVC  {
         rightButton.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
         rightButton.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
         rightButton.frame = CGRect(x: FScreen_W - 50, y:FStatusBar_H, width: 44, height: 44)
-        rightButton.addTarget(self, action: #selector(configShareAlertView), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(openPhotoMethod), for: .touchUpInside)
         self.navigationHeaderView.addSubview(rightButton)
-        updateViewStatus()
     }
 
-    @objc fileprivate func configShareAlertView() {
-        openPhotoMethod()
+    /**合成按键*/
+    fileprivate func configHeChengButton() {
+        heChengButton = UIButton(type: .custom)
+        heChengButton.frame = CGRect(x: (FScreen_W - 60)/2, y: FScreen_H - 75, width: 60, height: 60)
+        heChengButton.setTitle("合成", for: .normal)
+        heChengButton.backgroundColor = UIColor.ff_HexColor(0xFF8200)
+        heChengButton.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        heChengButton.setTitleColor(UIColor.white, for: .normal)
+        heChengButton.addTarget(self, action: #selector(heChengButtonClicked), for: .touchUpInside)
+        heChengButton.viewAddLayerCorner(cornerRadius: 30,UIColor.clear)
+        self.view.addSubview(heChengButton)
     }
-
+    
     /**修改状态*/
     fileprivate func updateViewStatus() {
         if dataSource.count <= 0 {
             noDataView.isHidden = false
             rightButton.isHidden = true
             colltionView?.isHidden = true
+            heChengButton.isHidden = true
         } else {
             noDataView.isHidden = true
             rightButton.isHidden = false
             colltionView?.isHidden = false
+            heChengButton.isHidden = false
         }
     }
     
     /**打开照片库*/
-    fileprivate func openPhotoMethod() {
+   @objc fileprivate func openPhotoMethod() {
         weak var weakSelf = self
         if dataSource.count > 9 {
             EEWrongAlert.show("最多能选择9张图片")
@@ -111,6 +124,36 @@ extension EEHeChengVC  {
             weakSelf?.dataSource += array
             weakSelf?.updateViewStatus()
             weakSelf?.colltionView?.reloadData()
+        }
+    }
+    
+    /**合成*/
+    @objc fileprivate func heChengButtonClicked() {
+        if dataSource.count < 2 {
+            EEWrongAlert.show("至少选择2张图片")
+            return
+        }
+        weak var weakSelf = self
+        EEWrongAlert.showActivityIndicator(text: "", detailText: "图片生成中...", toView: UIApplication.shared.keyWindow!, animated: true)
+        colltionView?.EEGContentScrollScreenShot({ (image) in
+            EEWrongAlert.hide()
+            if image != nil {
+                weakSelf?.showStoreView(image!)
+            }
+        })
+    }
+    
+    
+    /**展示页面*/
+    fileprivate func showStoreView(_ image:UIImage) {
+        weak var weakSelf = self
+        storeImageView.frame = CGRect(x: 0, y: 0, width: FScreen_W, height: FScreen_H)
+        self.view.addSubview(storeImageView)
+        storeImageView.updateViewWithImage(image)
+        storeImageView.saveImageBlock = { (image) in
+            let vc = EETintageVC()
+            vc.originalImage = image
+            weakSelf?.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

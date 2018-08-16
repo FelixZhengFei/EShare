@@ -36,6 +36,7 @@ class EESoreImageView: UIView{
     
     public func updateViewWithImage(_ image:UIImage) {
         storeImageView.image = image
+        storeImageView.contentMode = .scaleToFill
         storeImageView.frame = CGRect(x: 15, y: 30, width: FScreen_W - 30, height: image.size.height)
         var contentHeiht = image.size.height
         if contentHeiht < FScreen_H {
