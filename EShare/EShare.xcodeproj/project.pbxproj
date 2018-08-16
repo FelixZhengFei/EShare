@@ -26,6 +26,8 @@
 		762E26252122FCEC0077F8DD /* EETintageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26242122FCEC0077F8DD /* EETintageVC.swift */; };
 		762E26272123069A0077F8DD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762E26262123069A0077F8DD /* WebKit.framework */; };
 		762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E262A2123087A0077F8DD /* EEImageBroweView.swift */; };
+		76B342D82125668800C21142 /* EESelectedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B342D62125668800C21142 /* EESelectedImageCell.swift */; };
+		76B342D92125668800C21142 /* EESelectedImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B342D72125668800C21142 /* EESelectedImageCell.xib */; };
 		76E92797212542E4007F0C9D /* FFCameralPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E92796212542E4007F0C9D /* FFCameralPlugin.swift */; };
 		76E927992125432A007F0C9D /* EEHeChengVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E927982125432A007F0C9D /* EEHeChengVC.swift */; };
 		76E9279C2125440B007F0C9D /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E9279B2125440B007F0C9D /* UploadImageModel.swift */; };
@@ -59,6 +61,8 @@
 		762E26242122FCEC0077F8DD /* EETintageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EETintageVC.swift; sourceTree = "<group>"; };
 		762E26262123069A0077F8DD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		762E262A2123087A0077F8DD /* EEImageBroweView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEImageBroweView.swift; sourceTree = "<group>"; };
+		76B342D62125668800C21142 /* EESelectedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EESelectedImageCell.swift; sourceTree = "<group>"; };
+		76B342D72125668800C21142 /* EESelectedImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EESelectedImageCell.xib; sourceTree = "<group>"; };
 		76E92796212542E4007F0C9D /* FFCameralPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFCameralPlugin.swift; sourceTree = "<group>"; };
 		76E927982125432A007F0C9D /* EEHeChengVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEHeChengVC.swift; sourceTree = "<group>"; };
 		76E9279B2125440B007F0C9D /* UploadImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				76E92796212542E4007F0C9D /* FFCameralPlugin.swift */,
+				76B342D62125668800C21142 /* EESelectedImageCell.swift */,
+				76B342D72125668800C21142 /* EESelectedImageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 			files = (
 				762179D52122B75100321929 /* LaunchScreen.storyboard in Resources */,
 				76F0DB802124103200455BC3 /* EEAboutUsVC.xib in Resources */,
+				76B342D92125668800C21142 /* EESelectedImageCell.xib in Resources */,
 				76F0DB792123D4DB00455BC3 /* EEShareAlertView.xib in Resources */,
 				762179D22122B75100321929 /* Assets.xcassets in Resources */,
 				762E26182122D5DA0077F8DD /* EEMainVC.xib in Resources */,
@@ -427,6 +434,7 @@
 				762E26142122BECC0077F8DD /* WKWebView+EEShot.swift in Sources */,
 				762E26062122BA0A0077F8DD /* EEMainVC.swift in Sources */,
 				762E26132122BECC0077F8DD /* UIScrollView+EEShot.swift in Sources */,
+				76B342D82125668800C21142 /* EESelectedImageCell.swift in Sources */,
 				762E26022122B9AB0077F8DD /* EENavgationVC.swift in Sources */,
 				762E25FD2122B8CF0077F8DD /* EEGlobalConfig.swift in Sources */,
 				762E26122122BECC0077F8DD /* UIImage+EEGManage.swift in Sources */,

@@ -60,7 +60,7 @@ extension FFCameralPlugin {
     
     /**打开相册*/
     fileprivate func openLibaryView() {
-        let maxImageCount = 5
+        let maxImageCount = 9
         let imagePickerVC = TZImagePickerController(maxImagesCount: maxImageCount, columnNumber: 4, delegate: self, pushPhotoPickerVc: true)
         imagePickerVC?.minImagesCount = 0;
         //让完成按钮一直可以点击，无须最少选择一张图片
