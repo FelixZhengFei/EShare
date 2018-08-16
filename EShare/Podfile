@@ -2,12 +2,9 @@
 target 'EShare' do
   use_frameworks!
 
-pod 'SDWebImage'
 pod 'SDAutoLayout'
-pod 'TZImagePickerController'
 pod 'FFToolModule’
 pod 'BYToolModule’
-pod 'LEEAlert'
 pod 'MBProgressHUD'
 pod 'WechatOpenSDK'
 pod 'Weibo_SDK'

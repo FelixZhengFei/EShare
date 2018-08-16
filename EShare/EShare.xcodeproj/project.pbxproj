@@ -179,6 +179,7 @@
 		762E260B2122BEAD0077F8DD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				76E9279021251166007F0C9D /* View */,
 				762E26052122BA0A0077F8DD /* EEMainVC.swift */,
 				762E26172122D5DA0077F8DD /* EEMainVC.xib */,
 			);
@@ -220,6 +221,13 @@
 				762E26242122FCEC0077F8DD /* EETintageVC.swift */,
 			);
 			path = "处理图片";
+			sourceTree = "<group>";
+		};
+		76E9279021251166007F0C9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		76F0DB752123D47D00455BC3 /* View */ = {
@@ -544,7 +552,10 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
@@ -567,7 +578,10 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EShare/Tools/WeiChat",

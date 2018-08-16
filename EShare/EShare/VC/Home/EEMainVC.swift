@@ -9,16 +9,22 @@
 import UIKit
 import FFToolModule
 
+private let HIstroy_CELL_ID = "EEHomeHistroyCell"
+
 class EEMainVC: EEBaseVC,UITextFieldDelegate {
 
     @IBOutlet weak var serchButton: UIButton!
     @IBOutlet weak var textFiled: UITextField!
+    fileprivate var dataSorceAry = [Any]()
+    @IBOutlet weak var historyBaseView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "U-Screen"
         setupForDismissKeyboard()
         self.hideBackButton()
         configUI()
+        configHistyView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +75,63 @@ class EEMainVC: EEBaseVC,UITextFieldDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+extension EEMainVC {
+   
+    
+    fileprivate func  configHistyView() {
+        configData()
+        
+        let btnWidth:CGFloat = FScreen_W / 4
+        let btnHeight:CGFloat = 30
+        var btn_Y:CGFloat = 40
+        var btn_X:CGFloat = 0
+
+        for i in 0..<dataSorceAry.count {
+            let changeBtn = UIButton(type: .custom)
+            changeBtn.tag = i
+            changeBtn.frame = CGRect(x: btn_X, y: btn_Y, width: btnWidth  , height: btnHeight )
+            changeBtn.addTarget(self, action: #selector(histrouButtonClicked(_:)), for: .touchUpInside)
+            historyBaseView.addSubview(changeBtn)
+            changeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+            changeBtn.setTitleColor(UIColor.ff_HexColor(0x333333), for:.normal)
+            let dic = dataSorceAry[i] as! [String:String]
+            let nameString = dic["name"]!
+            changeBtn.setTitle(nameString, for: .normal)
+            
+            btn_X = btnWidth * CGFloat((i % 4) + 1)
+            if btn_X >= FScreen_W {
+                btn_X = 0
+                btn_Y += btnHeight + 10
+            }
+        }
+    }
+    
+    /**常用网站*/
+    fileprivate func configData() {
+        dataSorceAry.append(["name":"百度", "url":"https://www.baidu.com/"])
+        dataSorceAry.append(["name":"新浪", "url":"https://www.sina.com.cn/"])
+        dataSorceAry.append(["name":"腾讯", "url":"http://www.qq.com/"])
+        dataSorceAry.append(["name":"搜狐", "url":"http://www.sohu.com/"])
+        dataSorceAry.append(["name":"网易", "url":"https://www.163.com/"])
+        dataSorceAry.append(["name":"淘宝", "url":"https://www.taobao.com/"])
+        dataSorceAry.append(["name":"京东", "url":"https://www.jd.com/"])
+        dataSorceAry.append(["name":"国美", "url":"https://www.gome.com.cn/"])
+        dataSorceAry.append(["name":"火车购票", "url":"http://www.12306.cn/"])
+        dataSorceAry.append(["name":"雅虎", "url":"https://www.yahoo.com"])
+        dataSorceAry.append(["name":"好123", "url":"https://www.hao123.com/"])
+        dataSorceAry.append(["name":"58同城", "url":"http://hz.58.com/"])
+
+    }
+    /**常用网站*/
+    @objc func histrouButtonClicked(_ button:UIButton) {
+        let dic = dataSorceAry[button.tag] as! [String:String]
+        let urlString = dic["url"]!
+        let wKWebViewShot = EEWebView()
+        wKWebViewShot.urlString = urlString
+        self.navigationController?.pushViewController(wKWebViewShot, animated: true)
+    }
 }
 
 

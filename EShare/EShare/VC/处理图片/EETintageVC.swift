@@ -51,7 +51,7 @@ extension EETintageVC {
     
     /**底部按键*/
     fileprivate func configBottomButtons() {
-        var button_Y = FScreen_H - 120
+        var button_Y = FScreen_H - 110
         
         let lable = UILabel(frame: CGRect(x: 0, y: button_Y, width: FScreen_W, height: 30))
         lable.text = "渲染图片"

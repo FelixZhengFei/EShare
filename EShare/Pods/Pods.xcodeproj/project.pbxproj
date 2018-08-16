@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -282,7 +282,7 @@
 		125B8087120319E001366FB8D0163652 /* FFAppDevicePulgin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FFAppDevicePulgin.swift; path = BYToolModule/BYToolModule/extension/FFAppDevicePulgin.swift; sourceTree = "<group>"; };
 		131F2D83878BAC31A846402571B5A9E8 /* TZImagePickerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TZImagePickerController.modulemap; sourceTree = "<group>"; };
 		14419818504364CCCEB60D5F4665F06B /* LEEAlertHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LEEAlertHelper.h; path = LEEAlert/LEEAlertHelper.h; sourceTree = "<group>"; };
-		144E5F0FB871E3E522CC150034F3D0AF /* FFToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FFToolModule.framework; path = FFToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		144E5F0FB871E3E522CC150034F3D0AF /* FFToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		146ADA636DADC6E528BCD44D7B76226F /* FFToolModuleHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FFToolModuleHeader.h; path = FFToolModule/FFToolModule/FF_HeaderFile/FFToolModuleHeader.h; sourceTree = "<group>"; };
 		14A4B4DCB814A40807B999D1F59B548B /* TZAssetModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetModel.h; path = TZImagePickerController/TZImagePickerController/TZAssetModel.h; sourceTree = "<group>"; };
 		153ED6414195E8C66E39308B5C8EFA52 /* SDWebImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoderHelper.m; path = SDWebImage/SDWebImageCoderHelper.m; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 		235789C6AF78B2D6E2242A09A467F784 /* FFPassWordTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FFPassWordTool.m; path = FFToolModule/FFToolModule/FF_OC_Category/FFPassWordTool.m; sourceTree = "<group>"; };
 		23B3ABD3920A1C15817A76C056B6DCD5 /* SDWebImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoder.m; path = SDWebImage/SDWebImageCoder.m; sourceTree = "<group>"; };
 		25E4B6B612AB5663DB96AC0CFFF9B2CD /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SDAutoTableViewCellHeight.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
-		270501C130B759538E55CEC3DF0DCB5E /* SDAutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDAutoLayout.framework; path = SDAutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		270501C130B759538E55CEC3DF0DCB5E /* SDAutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDAutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AFB81A89483175B6CDBEB273845E7E /* LEEAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LEEAlert.m; path = LEEAlert/LEEAlert.m; sourceTree = "<group>"; };
 		28A4D14C9C08E0467F8497E3560C179A /* UIScreen+CZAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+CZAddition.m"; path = "FFToolModule/FFToolModule/FF_OC_Category/UIScreen+CZAddition.m"; sourceTree = "<group>"; };
 		2ECEC913B0E55B01C20B6A72CCB8E173 /* PPAddressBookHandle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPAddressBookHandle.swift; path = BYToolModule/BYToolModule/extension/PPAddressBookHandle.swift; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 		314A910649A5F636CDB86E510685D690 /* Empty+UIScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Empty+UIScrollView.swift"; path = "BYToolModule/BYToolModule/extension/Empty+UIScrollView.swift"; sourceTree = "<group>"; };
 		31A5FB41338E66EBD8D033722BA63699 /* UIView+CZAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+CZAddition.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/UIView+CZAddition.h"; sourceTree = "<group>"; };
 		3377A5AF0EF7EBEFF432147E8946A96B /* SDAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-prefix.pch"; sourceTree = "<group>"; };
-		363421399E9E33D0603944B3F2E20822 /* Pods_EShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EShare.framework; path = "Pods-EShare.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		363421399E9E33D0603944B3F2E20822 /* Pods_EShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3654A821810451F8484FC3BD3400CD85 /* TZImagePickerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZImagePickerController-umbrella.h"; sourceTree = "<group>"; };
 		378739BE7423D38B80942C053C96A72C /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		378846EF2F44F27116EC2E62280E6DE2 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+CZAddition.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/UILabel+CZAddition.h"; sourceTree = "<group>"; };
@@ -359,7 +359,7 @@
 		5C42B4571CC2CF42473A85086E57F309 /* NSString+CZBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+CZBase64.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSString+CZBase64.h"; sourceTree = "<group>"; };
 		5D85ED009003498A5E5C6CD46BAD84CE /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		5E15D952B6A3F5090D2E94D68D3E0C48 /* Pods-EShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EShare.release.xcconfig"; sourceTree = "<group>"; };
-		5EB0433E13EE13FF06A822C3D7CC0C42 /* BYToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BYToolModule.framework; path = BYToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB0433E13EE13FF06A822C3D7CC0C42 /* BYToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BYToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F4345CDE389851B4118E52B7D780761 /* UIView+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+extension.swift"; path = "BYToolModule/BYToolModule/extension/UIView+extension.swift"; sourceTree = "<group>"; };
 		6022FC6529038DBF7F3C6B49F6CBF595 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		60FA4F63511DB538A2EC119C73D08A68 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -412,9 +412,9 @@
 		8E029CCB6B7014D98FBC1192C6A8DAE9 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
 		8F7E2284C459CBD02F68B6C54A47290C /* UIView+WrongMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WrongMessage.h"; path = "FFToolModule/FFToolModule/FF_Wrong_Alert/UIView+WrongMessage.h"; sourceTree = "<group>"; };
 		913FE9FEED5BE531E35EF74A9DA570D1 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
-		91DDD438B3C68D54B0EEB0235683E5B6 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91DDD438B3C68D54B0EEB0235683E5B6 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		934C3E29938650A5AB45B64B0C7F3E7E /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942C69626E7046887EA8DFF8C8A97E2C /* UITextView+FFLimitCounter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+FFLimitCounter.m"; path = "FFToolModule/FFToolModule/FF_TextView_PlaceHolder/UITextView+FFLimitCounter.m"; sourceTree = "<group>"; };
 		94DA2425A1F3799A6247E344084507CF /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = WechatSDK1.8.2/libWeChatSDK.a; sourceTree = "<group>"; };
 		9657A2FEBF6F71F812AD110FCD903D59 /* Float+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Float+extension.swift"; path = "BYToolModule/BYToolModule/extension/Float+extension.swift"; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 		BD245C094F5738B61C2E47B5E825544D /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
 		BE0C3081F3236421F60E0FB9B4B27B06 /* SDWebImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoder.h; path = SDWebImage/SDWebImageCoder.h; sourceTree = "<group>"; };
 		BF4BAD9A6213E1040DC4E024F3CEB8DD /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
-		C06743609FD30A28352E949333FB3AA3 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C06743609FD30A28352E949333FB3AA3 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A3F0149AA0868B9C0DB84C834356CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		C28CDDC717C54841B8F9C6A503403E5E /* TZImagePickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZImagePickerController-prefix.pch"; sourceTree = "<group>"; };
 		C385307E993359018E655BE52832EA7B /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+CZAdditon.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
@@ -465,7 +465,7 @@
 		C7E35F61B17651C1C3463D1A4B5B96E4 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "BYToolModule/BYToolModule/extension/UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		C84D9511BE3F1CABE82606EECBB9BAD7 /* NSString+CZHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+CZHash.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSString+CZHash.h"; sourceTree = "<group>"; };
 		C91F23BFD7A5656877CABA75A3E00B14 /* SDAutoLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-umbrella.h"; sourceTree = "<group>"; };
-		CA0F0257B120FFB70DCF0D31E55E5F98 /* TZImagePickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TZImagePickerController.framework; path = TZImagePickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0F0257B120FFB70DCF0D31E55E5F98 /* TZImagePickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TZImagePickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5B33FE2249C71E29DCBFC93869B190 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		D418047974759302A4736F4582BF2CA8 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
 		D41CCDE767AC9F7C466219D5FDF23ABC /* SDWebImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCodersManager.h; path = SDWebImage/SDWebImageCodersManager.h; sourceTree = "<group>"; };
@@ -481,7 +481,7 @@
 		E5ECAA88EC915DBEEB2E62B2B9984C31 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		E8B7ADC4ED26267199F4F1F8B5326E23 /* SDAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDAutoLayout-dummy.m"; sourceTree = "<group>"; };
 		EAA41861DEFA8C6800B28C299F154820 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
-		EBEE648561994A64462DAA5A78B7B668 /* LEEAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LEEAlert.framework; path = LEEAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEE648561994A64462DAA5A78B7B668 /* LEEAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LEEAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC605C25ADAA1BDE4F9DCF7D7A397BB1 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		EDF771ECBB21E91B7E85ACA6134E19BE /* Empty+UITableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Empty+UITableView.swift"; path = "BYToolModule/BYToolModule/extension/Empty+UITableView.swift"; sourceTree = "<group>"; };
 		EE843A628CABD1D1485F2F1F7C96386B /* Dictionary+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+extension.swift"; path = "BYToolModule/BYToolModule/extension/Dictionary+extension.swift"; sourceTree = "<group>"; };
@@ -585,7 +585,6 @@
 				14419818504364CCCEB60D5F4665F06B /* LEEAlertHelper.h */,
 				9B67FB9D9C4128113FAA8358DA909EDD /* Support Files */,
 			);
-			name = LEEAlert;
 			path = LEEAlert;
 			sourceTree = "<group>";
 		};
@@ -618,7 +617,6 @@
 				C1490999163ACDFDE4BC21A42E511EF9 /* Core */,
 				363EEAA3BB9DAF1AA9293B2B8A33C107 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -693,7 +691,6 @@
 				8F2AC2F6124C6F49CD5CB8C7294BD91B /* FF_Wrong_Alert */,
 				542A5A0B0F7F166408CC508A041C510A /* Support Files */,
 			);
-			name = FFToolModule;
 			path = FFToolModule;
 			sourceTree = "<group>";
 		};
@@ -754,7 +751,6 @@
 				157C89C393B5732DEAC2FA6FC03C5F31 /* Resources */,
 				40619EE38415C4213DC9E58E3390770B /* Support Files */,
 			);
-			name = TZImagePickerController;
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
@@ -801,7 +797,6 @@
 				DDF1AAAFD5711D59342B591260CCB05E /* extension */,
 				B12F281FF685143B93A591ECD13A7E5B /* Support Files */,
 			);
-			name = BYToolModule;
 			path = BYToolModule;
 			sourceTree = "<group>";
 		};
@@ -827,7 +822,6 @@
 				41CD5F8538BA2AC3FD65BFAC1356C9EC /* WXApiObject.h */,
 				797B2ED9BC5783D647D70056F70AAC7E /* Frameworks */,
 			);
-			name = WechatOpenSDK;
 			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
@@ -908,7 +902,6 @@
 				DCC952ABAF0A75D5F5DF95C169A77A81 /* UIView+SDAutoLayout.m */,
 				257A2A4C3EDFFD674013C3BD08223A1F /* Support Files */,
 			);
-			name = SDAutoLayout;
 			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
@@ -1078,7 +1071,6 @@
 				60FA4F63511DB538A2EC119C73D08A68 /* MBProgressHUD.m */,
 				B63EFAFD9333978E26777D6F513C2EF7 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1103,7 +1095,6 @@
 				69F6BB366D9A9003466DA35AB14E1594 /* Frameworks */,
 				32005B34DEC21DC9A23EE7F0DAEEA7E7 /* Resources */,
 			);
-			name = Weibo_SDK;
 			path = Weibo_SDK;
 			sourceTree = "<group>";
 		};
@@ -1400,7 +1391,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1733,6 +1724,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
