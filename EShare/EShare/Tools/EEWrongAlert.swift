@@ -1,8 +1,8 @@
 //
 //  wrongView.swift
-//  BYXinLangFenQi
+//  EShare
 //
-//  Created by 王宇浩 on 2018/8/5.
+//  Created by 王宇浩 on 2018/8/15.
 //  Copyright © 2018年 王宇浩. All rights reserved.
 //
 

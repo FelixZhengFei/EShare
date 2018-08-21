@@ -120,7 +120,7 @@ extension EEHeChengVC  {
             EEWrongAlert.show("最多能选择9张图片")
             return
         }
-        FFCameralPlugin.shared.openPhoto { (array) in
+        EECameralPlugin.shared.openPhoto { (array) in
             weakSelf?.dataSource += array
             weakSelf?.updateViewStatus()
             weakSelf?.colltionView?.reloadData()

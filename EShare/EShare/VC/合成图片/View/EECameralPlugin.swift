@@ -1,16 +1,16 @@
 //
-//  FFCameralPlugin.swift
-//  SinaAging
+//  EECameralPlugin.swift
+//  EShare
 //
-//  Created by 郑强飞 on 2018/5/15.
-//  Copyright © 2018年 sinaAging. All rights reserved.
+//  Created by 郑强飞 on 2018/8/15.
+//  Copyright © 2018年 EShare. All rights reserved.
 //
 
 import UIKit
 import TZImagePickerController
 
-class FFCameralPlugin: NSObject,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    static let shared = FFCameralPlugin.init()
+class EECameralPlugin: NSObject,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    static let shared = EECameralPlugin.init()
     public var cameraFinishBlock:((_ images:[UIImage]) -> Void)?
     fileprivate let imagePickerController: UIImagePickerController = UIImagePickerController()
     fileprivate var userHasSelectedPhotos = [UploadImageModel]()//存放图片
@@ -38,7 +38,7 @@ class FFCameralPlugin: NSObject,UIImagePickerControllerDelegate, UINavigationCon
 
 
 // MARK: - 图片选择
-extension FFCameralPlugin {
+extension EECameralPlugin {
     
     /**配置*/
     fileprivate func configViews() {
@@ -138,7 +138,7 @@ extension FFCameralPlugin {
 }
 
 // MARK: - TZImagePickerControllerDelegate
-extension FFCameralPlugin: TZImagePickerControllerDelegate {
+extension EECameralPlugin: TZImagePickerControllerDelegate {
     
     func tz_imagePickerControllerDidCancel(_ picker: TZImagePickerController!) {
     }
@@ -153,7 +153,7 @@ extension FFCameralPlugin: TZImagePickerControllerDelegate {
 }
 
 // MARK: - 上传图片
-extension FFCameralPlugin {
+extension EECameralPlugin {
     //上传详细图片
     fileprivate func uploadDetailImages() {
         getImagesUrlStringFromArray()

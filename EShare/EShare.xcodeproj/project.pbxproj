@@ -28,7 +28,7 @@
 		762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E262A2123087A0077F8DD /* EEImageBroweView.swift */; };
 		76B342D82125668800C21142 /* EESelectedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B342D62125668800C21142 /* EESelectedImageCell.swift */; };
 		76B342D92125668800C21142 /* EESelectedImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B342D72125668800C21142 /* EESelectedImageCell.xib */; };
-		76E92797212542E4007F0C9D /* FFCameralPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E92796212542E4007F0C9D /* FFCameralPlugin.swift */; };
+		76E92797212542E4007F0C9D /* EECameralPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E92796212542E4007F0C9D /* EECameralPlugin.swift */; };
 		76E927992125432A007F0C9D /* EEHeChengVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E927982125432A007F0C9D /* EEHeChengVC.swift */; };
 		76E9279C2125440B007F0C9D /* UploadImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E9279B2125440B007F0C9D /* UploadImageModel.swift */; };
 		76F0DB772123D49B00455BC3 /* EEShareAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DB762123D49B00455BC3 /* EEShareAlertView.swift */; };
@@ -63,7 +63,7 @@
 		762E262A2123087A0077F8DD /* EEImageBroweView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEImageBroweView.swift; sourceTree = "<group>"; };
 		76B342D62125668800C21142 /* EESelectedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EESelectedImageCell.swift; sourceTree = "<group>"; };
 		76B342D72125668800C21142 /* EESelectedImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EESelectedImageCell.xib; sourceTree = "<group>"; };
-		76E92796212542E4007F0C9D /* FFCameralPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFCameralPlugin.swift; sourceTree = "<group>"; };
+		76E92796212542E4007F0C9D /* EECameralPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECameralPlugin.swift; sourceTree = "<group>"; };
 		76E927982125432A007F0C9D /* EEHeChengVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEHeChengVC.swift; sourceTree = "<group>"; };
 		76E9279B2125440B007F0C9D /* UploadImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageModel.swift; sourceTree = "<group>"; };
 		76F0D0AB2123B71D00455BC3 /* EEBridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEBridgeHeader.h; sourceTree = "<group>"; };
@@ -190,7 +190,6 @@
 		762E260B2122BEAD0077F8DD /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				76E9279021251166007F0C9D /* View */,
 				762E26052122BA0A0077F8DD /* EEMainVC.swift */,
 				762E26172122D5DA0077F8DD /* EEMainVC.xib */,
 			);
@@ -235,13 +234,6 @@
 			path = "处理图片";
 			sourceTree = "<group>";
 		};
-		76E9279021251166007F0C9D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		76E92795212542B0007F0C9D /* 合成图片 */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,7 +246,7 @@
 		76E9279A212543B3007F0C9D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				76E92796212542E4007F0C9D /* FFCameralPlugin.swift */,
+				76E92796212542E4007F0C9D /* EECameralPlugin.swift */,
 				76B342D62125668800C21142 /* EESelectedImageCell.swift */,
 				76B342D72125668800C21142 /* EESelectedImageCell.xib */,
 			);
@@ -440,7 +432,7 @@
 				762E26122122BECC0077F8DD /* UIImage+EEGManage.swift in Sources */,
 				762E26222122F9B10077F8DD /* EEWrongAlert.swift in Sources */,
 				762E26042122B9AB0077F8DD /* EENavBar.swift in Sources */,
-				76E92797212542E4007F0C9D /* FFCameralPlugin.swift in Sources */,
+				76E92797212542E4007F0C9D /* EECameralPlugin.swift in Sources */,
 				76E9279C2125440B007F0C9D /* UploadImageModel.swift in Sources */,
 				762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */,
 			);

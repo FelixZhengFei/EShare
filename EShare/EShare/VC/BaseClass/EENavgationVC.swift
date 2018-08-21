@@ -1,9 +1,9 @@
 //
 //  EENavgationVC.swift
-//  SDYQ
+//  EShare
 //
-//  Created by 陈学明 on 2017/11/28.
-//  Copyright © 2017年 shandianyouqian. All rights reserved.
+//  Created by 郑强飞 on 2018/8/14.
+//  Copyright © 2018年 EShare. All rights reserved.
 //
 
 import UIKit
