@@ -16,7 +16,8 @@ class EEHeChengVC: EEBaseVC {
     fileprivate var rightButton = UIButton() //右键
     fileprivate var heChengButton = UIButton()//合成
     fileprivate var storeImageView = EESoreImageView()
-
+    fileprivate var showClose:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "合成长图"
@@ -134,6 +135,9 @@ extension EEHeChengVC  {
             return
         }
         weak var weakSelf = self
+        showClose = false
+        colltionView?.reloadData()
+
         EEWrongAlert.showActivityIndicator(text: "", detailText: "图片生成中...", toView: UIApplication.shared.keyWindow!, animated: true)
         colltionView?.EEGContentScrollScreenShot({ (image) in
             EEWrongAlert.hide()
@@ -211,6 +215,7 @@ extension EEHeChengVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EESelectedImageCell", for: indexPath) as! EESelectedImageCell
         let image = dataSource[indexPath.row]
         cell.imageView?.image = image
+        cell.closeButton.isHidden = !showClose
         cell.closeButton.tag = indexPath.row
         cell.closeButton.addTarget(self, action: #selector(closeButtonClicked(_:)), for: .touchUpInside)
         return cell
@@ -218,6 +223,12 @@ extension EEHeChengVC:UICollectionViewDelegate,UICollectionViewDataSource,UIColl
     
     func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+        showClose = !showClose
+        collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {

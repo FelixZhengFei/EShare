@@ -227,7 +227,6 @@
 		762E26232122FC260077F8DD /* 处理图片 */ = {
 			isa = PBXGroup;
 			children = (
-				76E9279B2125440B007F0C9D /* UploadImageModel.swift */,
 				76F0DB752123D47D00455BC3 /* View */,
 				762E26242122FCEC0077F8DD /* EETintageVC.swift */,
 			);
@@ -256,6 +255,7 @@
 		76F0DB752123D47D00455BC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76E9279B2125440B007F0C9D /* UploadImageModel.swift */,
 				762E262A2123087A0077F8DD /* EEImageBroweView.swift */,
 				76F0DB762123D49B00455BC3 /* EEShareAlertView.swift */,
 				76F0DB782123D4DB00455BC3 /* EEShareAlertView.xib */,
