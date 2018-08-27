@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TZImagePickerController
 
 class EECameralPlugin: NSObject,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     static let shared = EECameralPlugin.init()
@@ -123,7 +122,7 @@ extension EECameralPlugin {
                 } else {
                     
                     TZImageManager().getCameraRollAlbum(false, allowPickingImage:true, needFetchAssets: false, completion: { (model) in
-                        TZImageManager().getAssetsFromFetchResult(model?.result, allowPickingVideo: false, allowPickingImage: true, completion: { (models) in
+                        TZImageManager().getAssetsFrom(model?.result, allowPickingVideo: false, allowPickingImage: true, completion: { (models) in
                             tzImagePickerVC?.hideProgressHUD()
                             self.userHasSelectedPhotos.append(UploadImageModel.getupLoadImageModel(image: image,tagetSize:CGSize(width: 800, height: 800)))
                             self.uploadDetailImages()

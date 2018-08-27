@@ -42,7 +42,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
@@ -63,9 +63,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>为了能够拍摄您的生活照片</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>为了能够保存截取好的长图片</string>
+	<string>为了能选择您的生活图片或者保存长图片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>为了能够保存截取好的长图片</string>
+	<string>为了能选择您的生活图片或者保存长图片</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

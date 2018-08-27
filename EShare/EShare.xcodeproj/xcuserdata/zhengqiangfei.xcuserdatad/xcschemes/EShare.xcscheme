@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E0B7D4BB21475CEC7CEFBAA599B0D117"
-               BuildableName = "TZImagePickerController.framework"
-               BlueprintName = "TZImagePickerController"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "762179C62122B75000321929"
+               BuildableName = "EShare.app"
+               BlueprintName = "EShare"
+               ReferencedContainer = "container:EShare.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "762179C62122B75000321929"
+            BuildableName = "EShare.app"
+            BlueprintName = "EShare"
+            ReferencedContainer = "container:EShare.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E0B7D4BB21475CEC7CEFBAA599B0D117"
-            BuildableName = "TZImagePickerController.framework"
-            BlueprintName = "TZImagePickerController"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "762179C62122B75000321929"
+            BuildableName = "EShare.app"
+            BlueprintName = "EShare"
+            ReferencedContainer = "container:EShare.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "762179C62122B75000321929"
+            BuildableName = "EShare.app"
+            BlueprintName = "EShare"
+            ReferencedContainer = "container:EShare.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

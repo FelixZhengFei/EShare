@@ -26,6 +26,20 @@
 		762E26252122FCEC0077F8DD /* EETintageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E26242122FCEC0077F8DD /* EETintageVC.swift */; };
 		762E26272123069A0077F8DD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762E26262123069A0077F8DD /* WebKit.framework */; };
 		762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762E262A2123087A0077F8DD /* EEImageBroweView.swift */; };
+		7692BE3B2133C95E007213AE /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE202133C95E007213AE /* TZImageCropManager.m */; };
+		7692BE3C2133C95E007213AE /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE222133C95E007213AE /* TZAssetCell.m */; };
+		7692BE3D2133C95E007213AE /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE232133C95E007213AE /* TZVideoPlayerController.m */; };
+		7692BE3E2133C95E007213AE /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE242133C95E007213AE /* TZAssetModel.m */; };
+		7692BE3F2133C95E007213AE /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE252133C95E007213AE /* NSBundle+TZImagePicker.m */; };
+		7692BE402133C95E007213AE /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE282133C95E007213AE /* UIView+Layout.m */; };
+		7692BE412133C95E007213AE /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE292133C95E007213AE /* TZPhotoPreviewController.m */; };
+		7692BE422133C95E007213AE /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7692BE2A2133C95E007213AE /* TZImagePickerController.bundle */; };
+		7692BE432133C95E007213AE /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE2B2133C95E007213AE /* TZProgressView.m */; };
+		7692BE442133C95E007213AE /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE2E2133C95E007213AE /* TZImageManager.m */; };
+		7692BE452133C95E007213AE /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE302133C95E007213AE /* TZPhotoPickerController.m */; };
+		7692BE462133C95E007213AE /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE312133C95E007213AE /* TZPhotoPreviewCell.m */; };
+		7692BE472133C95E007213AE /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE372133C95E007213AE /* TZImagePickerController.m */; };
+		7692BE492133C95E007213AE /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7692BE392133C95E007213AE /* TZGifPhotoPreviewController.m */; };
 		76B342D82125668800C21142 /* EESelectedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B342D62125668800C21142 /* EESelectedImageCell.swift */; };
 		76B342D92125668800C21142 /* EESelectedImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B342D72125668800C21142 /* EESelectedImageCell.xib */; };
 		76E92797212542E4007F0C9D /* EECameralPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E92796212542E4007F0C9D /* EECameralPlugin.swift */; };
@@ -61,6 +75,33 @@
 		762E26242122FCEC0077F8DD /* EETintageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EETintageVC.swift; sourceTree = "<group>"; };
 		762E26262123069A0077F8DD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		762E262A2123087A0077F8DD /* EEImageBroweView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEImageBroweView.swift; sourceTree = "<group>"; };
+		7692BE1E2133C95E007213AE /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		7692BE1F2133C95E007213AE /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		7692BE202133C95E007213AE /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
+		7692BE212133C95E007213AE /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		7692BE222133C95E007213AE /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		7692BE232133C95E007213AE /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		7692BE242133C95E007213AE /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		7692BE252133C95E007213AE /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		7692BE272133C95E007213AE /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		7692BE282133C95E007213AE /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		7692BE292133C95E007213AE /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		7692BE2A2133C95E007213AE /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		7692BE2B2133C95E007213AE /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
+		7692BE2C2133C95E007213AE /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		7692BE2D2133C95E007213AE /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		7692BE2E2133C95E007213AE /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		7692BE2F2133C95E007213AE /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
+		7692BE302133C95E007213AE /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		7692BE312133C95E007213AE /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		7692BE322133C95E007213AE /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		7692BE332133C95E007213AE /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		7692BE342133C95E007213AE /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		7692BE352133C95E007213AE /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		7692BE362133C95E007213AE /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		7692BE372133C95E007213AE /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		7692BE392133C95E007213AE /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		7692BE3A2133C95E007213AE /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
 		76B342D62125668800C21142 /* EESelectedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EESelectedImageCell.swift; sourceTree = "<group>"; };
 		76B342D72125668800C21142 /* EESelectedImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EESelectedImageCell.xib; sourceTree = "<group>"; };
 		76E92796212542E4007F0C9D /* EECameralPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECameralPlugin.swift; sourceTree = "<group>"; };
@@ -151,6 +192,7 @@
 		762E26072122BE730077F8DD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7692BE1D2133C95E007213AE /* TZImagePickerController */,
 				762E26212122F9B10077F8DD /* EEWrongAlert.swift */,
 				762E260C2122BEC30077F8DD /* DDGScreenShot */,
 			);
@@ -231,6 +273,40 @@
 				762E26242122FCEC0077F8DD /* EETintageVC.swift */,
 			);
 			path = "处理图片";
+			sourceTree = "<group>";
+		};
+		7692BE1D2133C95E007213AE /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				7692BE1E2133C95E007213AE /* TZPhotoPreviewCell.h */,
+				7692BE1F2133C95E007213AE /* TZPhotoPickerController.h */,
+				7692BE202133C95E007213AE /* TZImageCropManager.m */,
+				7692BE212133C95E007213AE /* TZImageManager.h */,
+				7692BE222133C95E007213AE /* TZAssetCell.m */,
+				7692BE232133C95E007213AE /* TZVideoPlayerController.m */,
+				7692BE242133C95E007213AE /* TZAssetModel.m */,
+				7692BE252133C95E007213AE /* NSBundle+TZImagePicker.m */,
+				7692BE272133C95E007213AE /* TZImagePickerController.h */,
+				7692BE282133C95E007213AE /* UIView+Layout.m */,
+				7692BE292133C95E007213AE /* TZPhotoPreviewController.m */,
+				7692BE2A2133C95E007213AE /* TZImagePickerController.bundle */,
+				7692BE2B2133C95E007213AE /* TZProgressView.m */,
+				7692BE2C2133C95E007213AE /* TZGifPhotoPreviewController.h */,
+				7692BE2D2133C95E007213AE /* TZAssetCell.h */,
+				7692BE2E2133C95E007213AE /* TZImageManager.m */,
+				7692BE2F2133C95E007213AE /* TZImageCropManager.h */,
+				7692BE302133C95E007213AE /* TZPhotoPickerController.m */,
+				7692BE312133C95E007213AE /* TZPhotoPreviewCell.m */,
+				7692BE322133C95E007213AE /* NSBundle+TZImagePicker.h */,
+				7692BE332133C95E007213AE /* TZAssetModel.h */,
+				7692BE342133C95E007213AE /* TZVideoPlayerController.h */,
+				7692BE352133C95E007213AE /* TZPhotoPreviewController.h */,
+				7692BE362133C95E007213AE /* UIView+Layout.h */,
+				7692BE372133C95E007213AE /* TZImagePickerController.m */,
+				7692BE392133C95E007213AE /* TZGifPhotoPreviewController.m */,
+				7692BE3A2133C95E007213AE /* TZProgressView.h */,
+			);
+			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
 		76E92795212542B0007F0C9D /* 合成图片 */ = {
@@ -337,6 +413,7 @@
 				76F0DB802124103200455BC3 /* EEAboutUsVC.xib in Resources */,
 				76B342D92125668800C21142 /* EESelectedImageCell.xib in Resources */,
 				76F0DB792123D4DB00455BC3 /* EEShareAlertView.xib in Resources */,
+				7692BE422133C95E007213AE /* TZImagePickerController.bundle in Resources */,
 				762179D22122B75100321929 /* Assets.xcassets in Resources */,
 				762E26182122D5DA0077F8DD /* EEMainVC.xib in Resources */,
 			);
@@ -356,7 +433,6 @@
 				"${BUILT_PRODUCTS_DIR}/FFToolModule/FFToolModule.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -364,7 +440,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FFToolModule.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -416,23 +491,36 @@
 			files = (
 				762E26112122BECC0077F8DD /* UIView+EEShot.swift in Sources */,
 				76F0DB772123D49B00455BC3 /* EEShareAlertView.swift in Sources */,
+				7692BE3D2133C95E007213AE /* TZVideoPlayerController.m in Sources */,
 				762E261C2122D9F40077F8DD /* EESoreImageView.swift in Sources */,
 				76E927992125432A007F0C9D /* EEHeChengVC.swift in Sources */,
 				762E26162122BF210077F8DD /* EEWebView.swift in Sources */,
 				76F0DB7F2124103200455BC3 /* EEAboutUsVC.swift in Sources */,
 				762E26252122FCEC0077F8DD /* EETintageVC.swift in Sources */,
 				762E26032122B9AB0077F8DD /* EEBaseVC.swift in Sources */,
+				7692BE462133C95E007213AE /* TZPhotoPreviewCell.m in Sources */,
+				7692BE452133C95E007213AE /* TZPhotoPickerController.m in Sources */,
+				7692BE492133C95E007213AE /* TZGifPhotoPreviewController.m in Sources */,
 				762179CB2122B75000321929 /* AppDelegate.swift in Sources */,
 				762E26142122BECC0077F8DD /* WKWebView+EEShot.swift in Sources */,
 				762E26062122BA0A0077F8DD /* EEMainVC.swift in Sources */,
+				7692BE3E2133C95E007213AE /* TZAssetModel.m in Sources */,
+				7692BE442133C95E007213AE /* TZImageManager.m in Sources */,
+				7692BE472133C95E007213AE /* TZImagePickerController.m in Sources */,
 				762E26132122BECC0077F8DD /* UIScrollView+EEShot.swift in Sources */,
+				7692BE402133C95E007213AE /* UIView+Layout.m in Sources */,
+				7692BE412133C95E007213AE /* TZPhotoPreviewController.m in Sources */,
 				76B342D82125668800C21142 /* EESelectedImageCell.swift in Sources */,
 				762E26022122B9AB0077F8DD /* EENavgationVC.swift in Sources */,
 				762E25FD2122B8CF0077F8DD /* EEGlobalConfig.swift in Sources */,
 				762E26122122BECC0077F8DD /* UIImage+EEGManage.swift in Sources */,
 				762E26222122F9B10077F8DD /* EEWrongAlert.swift in Sources */,
+				7692BE3C2133C95E007213AE /* TZAssetCell.m in Sources */,
+				7692BE3F2133C95E007213AE /* NSBundle+TZImagePicker.m in Sources */,
 				762E26042122B9AB0077F8DD /* EENavBar.swift in Sources */,
+				7692BE432133C95E007213AE /* TZProgressView.m in Sources */,
 				76E92797212542E4007F0C9D /* EECameralPlugin.swift in Sources */,
+				7692BE3B2133C95E007213AE /* TZImageCropManager.m in Sources */,
 				76E9279C2125440B007F0C9D /* UploadImageModel.swift in Sources */,
 				762E262B2123087A0077F8DD /* EEImageBroweView.swift in Sources */,
 			);
@@ -571,21 +659,21 @@
 			baseConfigurationReference = BF225807CCA384C75C3DE2C7 /* Pods-EShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YX42LJ752B;
+				DEVELOPMENT_TEAM = H928XCDSK5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.changtu.ufilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = EShare/Config/EEBridgeHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -597,21 +685,21 @@
 			baseConfigurationReference = BCF228D100E67EC1E7B4C5A6 /* Pods-EShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YX42LJ752B;
+				DEVELOPMENT_TEAM = H928XCDSK5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = EShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EShare/Tools/WeiChat",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.changtu.ufilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = EShare/Config/EEBridgeHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

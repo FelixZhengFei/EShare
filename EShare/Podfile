@@ -8,6 +8,5 @@ pod 'BYToolModule’
 pod 'MBProgressHUD'
 pod 'WechatOpenSDK'
 pod 'Weibo_SDK'
-pod 'TZImagePickerController'
 
 end
