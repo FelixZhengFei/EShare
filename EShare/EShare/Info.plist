@@ -27,7 +27,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxf8f980ec6a530153</string>
+				<string>wxfa494503c75381a8</string>
 			</array>
 		</dict>
 		<dict>
@@ -46,12 +46,12 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>weixin</string>
-        <string>sinaweibo</string>
-        <string>sinaweibohd</string>
-        <string>sinaweibosso</string>
-        <string>sinaweibohdsso</string>
-        <string>weibosdk</string>
-        <string>weibosdk2.5</string>
+		<string>sinaweibo</string>
+		<string>sinaweibohd</string>
+		<string>sinaweibosso</string>
+		<string>sinaweibohdsso</string>
+		<string>weibosdk</string>
+		<string>weibosdk2.5</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

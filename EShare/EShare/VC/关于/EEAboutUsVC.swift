@@ -25,7 +25,7 @@ class EEAboutUsVC: EEBaseVC {
     
     fileprivate func configInfoLabel() {
         let nameString = """
-            U-Screen 是一款已截取网站长图为主功能的App,并可以对图片进行深度渲染处理，完成后可以将图片保存到手机照相库或者分享给其他朋友
+            U-Screen 是一款已截取网站长图为主功能,手动合成长图等功能的应用,并可以对图片进行深度渲染处理，完成后可以将图片保存到手机照相库或者分享给其他朋友
         """
         let nameStr:NSMutableAttributedString = NSMutableAttributedString(string: nameString)
         let paragraphStyle = NSMutableParagraphStyle()
