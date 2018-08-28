@@ -30,14 +30,13 @@ class EEAboutUsVC: EEBaseVC {
         let nameStr:NSMutableAttributedString = NSMutableAttributedString(string: nameString)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 12
-        paragraphStyle.alignment = .right
+        paragraphStyle.alignment = .center
         nameStr.addAttribute(kCTParagraphStyleAttributeName as NSAttributedStringKey, value: paragraphStyle, range: NSMakeRange(0, nameString.count))
         infoLabel.attributedText = nameStr
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

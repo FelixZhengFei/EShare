@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -153,16 +153,16 @@
 		1C0D5868EAA0D18C23696B4CB6EE4E4D /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDAutoLayout.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
 		1F586B37588BC7E2F7DC58D8AA5E093E /* WeiboSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = "<group>"; };
 		218953FA515C5C41D7ACFF54B95A590E /* UILabel+CZAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+CZAddition.m"; path = "FFToolModule/FFToolModule/FF_OC_Category/UILabel+CZAddition.m"; sourceTree = "<group>"; };
-		229C524DC91FE6FAA68E6F42DF0C728E /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		229C524DC91FE6FAA68E6F42DF0C728E /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2772B6932CC9B874D86761C7216B8312 /* NSArray+Log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Log.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSArray+Log.h"; sourceTree = "<group>"; };
-		287E4073F95B9F03C40149F0254D0729 /* BYToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BYToolModule.framework; path = BYToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		287E4073F95B9F03C40149F0254D0729 /* BYToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BYToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E19E40148A2B3E9B7B26DEF3476CD1 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2B9DDB9073FA650C156B6A48E84E76B5 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CZAddition.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/UIViewController+CZAddition.h"; sourceTree = "<group>"; };
 		301E6374595476A75A84E60C48D56F52 /* NSArray+Log.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Log.m"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSArray+Log.m"; sourceTree = "<group>"; };
 		308D54CFB40B4760C789B34AEDE76A5C /* SDAutoLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-umbrella.h"; sourceTree = "<group>"; };
 		320616043528B62C38824A2768A7776B /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Extensions.swift"; path = "BYToolModule/BYToolModule/extension/UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		3488794001D6F50B0735B2983B46034A /* BYToolModule.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BYToolModule.xcconfig; sourceTree = "<group>"; };
-		381FB2933EB363360FC1F7A620C59634 /* FFToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FFToolModule.framework; path = FFToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		381FB2933EB363360FC1F7A620C59634 /* FFToolModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFToolModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3864E544646A11347E40F1026C213A32 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = WechatSDK1.8.2/WXApiObject.h; sourceTree = "<group>"; };
 		38D038F96A3FB2F90089B275C3330364 /* UIView+WrongMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WrongMessage.h"; path = "FFToolModule/FFToolModule/FF_Wrong_Alert/UIView+WrongMessage.h"; sourceTree = "<group>"; };
 		390DCDD790AD637C730BB077EAC18B0B /* FFAlertHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FFAlertHelper.h; path = FFToolModule/FFToolModule/FF_Alert/FFAlertHelper.h; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		409899CE1143F81E8130E2069D59605B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		40C6CC8582924583033CA6BCB928144B /* FFToolModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FFToolModule-dummy.m"; sourceTree = "<group>"; };
 		4432E7813CE95F57E45D54C2F74F8809 /* FFRightBlackAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FFRightBlackAlertView.h; path = FFToolModule/FFToolModule/FF_Wrong_Alert/FFRightBlackAlertView.h; sourceTree = "<group>"; };
-		444F3BDED6C7885627272CF18EC75654 /* SDAutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDAutoLayout.framework; path = SDAutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		444F3BDED6C7885627272CF18EC75654 /* SDAutoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDAutoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F6FBD3936F2ECA8FD0273F2C0F8236 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CZAddition.m"; path = "FFToolModule/FFToolModule/FF_OC_Category/UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		475ABB1E86E37023B07AF44590EFF3FC /* SDAutoLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDAutoLayout.modulemap; sourceTree = "<group>"; };
 		5830D1115A861F749FA561D43AAC4C6A /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Extension.swift"; path = "BYToolModule/BYToolModule/extension/UISearchBar+Extension.swift"; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		90C0016B7377F0ECD440721E4C2644A1 /* BYToolModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BYToolModule.modulemap; sourceTree = "<group>"; };
 		90E1FDA9E6EAE773BD45E0B67562C72D /* UIViewController+WrongMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+WrongMessage.h"; path = "FFToolModule/FFToolModule/FF_Wrong_Alert/UIViewController+WrongMessage.h"; sourceTree = "<group>"; };
 		921A2A8C15E6246ED724E06174BEDC3F /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96A2FC75E51AA187D6B9E6FD5530C538 /* FFLoadXibProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FFLoadXibProtocol.swift; path = BYToolModule/BYToolModule/extension/FFLoadXibProtocol.swift; sourceTree = "<group>"; };
 		96D1F4477395E8010B5D470C8F38B098 /* FFCountDownButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FFCountDownButton.h; path = FFToolModule/FFToolModule/FF_CountDownButton/FFCountDownButton.h; sourceTree = "<group>"; };
 		96E4E78376D7B76FFF23247BB665E0E9 /* BYToolModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BYToolModule-prefix.pch"; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		E1B7FEAAD59150D030BEFEE4B5D53A6A /* FFToolModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FFToolModule-umbrella.h"; sourceTree = "<group>"; };
 		E4FAC1A21820D7BA8503341F1A60FCF1 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		E5FD12DAFAAA407D9278FFF998E4B74E /* NSString+CZHash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+CZHash.h"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSString+CZHash.h"; sourceTree = "<group>"; };
-		E66657BA3F06F938A44B6E79A7411221 /* Pods_EShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EShare.framework; path = "Pods-EShare.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66657BA3F06F938A44B6E79A7411221 /* Pods_EShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF3939BBE387F0951EC74859C60E2AD /* EmptyPage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyPage.swift; path = BYToolModule/BYToolModule/extension/EmptyPage.swift; sourceTree = "<group>"; };
 		EF374CCE425F1EB461B2BF64F0025D8D /* WeiboSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = "<group>"; };
 		F4E4418EB8DA804768083C03CC8285B8 /* NSString+CZBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+CZBase64.m"; path = "FFToolModule/FFToolModule/FF_OC_Category/NSString+CZBase64.m"; sourceTree = "<group>"; };
@@ -364,7 +364,6 @@
 				DFE76EB35DEE73CC4457000F32F13501 /* extension */,
 				320AA511A35EC6E3CBD9FA6E44AA1800 /* Support Files */,
 			);
-			name = BYToolModule;
 			path = BYToolModule;
 			sourceTree = "<group>";
 		};
@@ -417,7 +416,6 @@
 				28E19E40148A2B3E9B7B26DEF3476CD1 /* MBProgressHUD.m */,
 				C65E36D79A4028C3EB12A8678CBC3007 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -439,7 +437,6 @@
 				3864E544646A11347E40F1026C213A32 /* WXApiObject.h */,
 				4C0134F63C614450A7A63B10C638A4C1 /* Frameworks */,
 			);
-			name = WechatOpenSDK;
 			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
@@ -493,7 +490,6 @@
 				D38DCD12FD10B89A47D7078E19545626 /* Frameworks */,
 				37F6619189DD37919A885311D01171BF /* Resources */,
 			);
-			name = Weibo_SDK;
 			path = Weibo_SDK;
 			sourceTree = "<group>";
 		};
@@ -548,7 +544,6 @@
 				59E23390E3F9D7410C990F598ED2A111 /* FF_Wrong_Alert */,
 				C25EDC658CDE99E74EFE084A0EFAAC12 /* Support Files */,
 			);
-			name = FFToolModule;
 			path = FFToolModule;
 			sourceTree = "<group>";
 		};
@@ -661,7 +656,6 @@
 				1C0D5868EAA0D18C23696B4CB6EE4E4D /* UIView+SDAutoLayout.m */,
 				D3292B066524BF1CDC503C5467DA2EB8 /* Support Files */,
 			);
-			name = SDAutoLayout;
 			path = SDAutoLayout;
 			sourceTree = "<group>";
 		};
@@ -836,7 +830,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1097,6 +1091,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

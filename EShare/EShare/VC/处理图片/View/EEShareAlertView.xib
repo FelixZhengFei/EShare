@@ -175,9 +175,9 @@
     </objects>
     <resources>
         <image name="btn_nor" width="321" height="50"/>
-        <image name="pengyouq" width="50" height="50"/>
-        <image name="photo_img" width="50" height="50"/>
-        <image name="sina_cion" width="50" height="50"/>
-        <image name="weixin" width="50" height="50"/>
+        <image name="pengyouq" width="64" height="64"/>
+        <image name="photo_img" width="64" height="64"/>
+        <image name="sina_cion" width="64" height="64"/>
+        <image name="weixin" width="64" height="64"/>
     </resources>
 </document>
